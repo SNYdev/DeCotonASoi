@@ -24,20 +24,20 @@ class User {
     }
 
     public function countUserByName($name) {
-        $request = $this->bdd-> prepare('SELECT count(*) as nb_user FROM users WHERE login=?');
+        $request = $this->connection->prepare('SELECT count(*) as nb_user FROM users WHERE login=?');
         $request->execute(array($name));
         $response = $request->fetch();
 
         return $response;
     }
 
-    public function addUser($name, $password) {
-        $requete = $this->bdd-> prepare('INSERT INTO users(login, password) VALUES (?,?)');
-        $requete->execute(array($name, sha1($password)));
+    public function addUser($firstname, $lastname, $login, $password, $address, $city, $zcode, $email) {
+        $requete = $this->connection->prepare('INSERT INTO users(prenom, nom, login, motDePasse, adresse, ville, codePostal, email) VALUES (?,?,?,?,?,?,?,?)');
+        $requete->execute(array($firstname, $lastname, $login, sha1($password), $address, $city, $zcode, $email));
     }
 
     function getUserByName($name) {
-        $request = $this->bdd-> prepare('SELECT * FROM users WHERE login=?');
+        $request = $this->connection->prepare('SELECT * FROM users WHERE login=?');
         $request->execute(array($name));
         $user = $request->fetch();
 
@@ -45,7 +45,7 @@ class User {
     }
 
     public function getUserByNameAndPassword($name, $password) {
-        $request = $this->bdd-> prepare('SELECT * FROM users WHERE login=? AND password=?');
+        $request = $this->connection->prepare('SELECT * FROM users WHERE login=? AND password=?');
         $request->execute(array($name, sha1($password)));
         $user = $request->fetch();
 

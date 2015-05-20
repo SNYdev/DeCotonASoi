@@ -72,10 +72,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <script src="js/jquery-2.1.3.min.js"></script>
 </head>
 <body>
-
-Vous pouvez faire évoluer l'HTML
 
 <ul>
     <li><a href="?page=home" title="home">Home</a></li>
@@ -106,7 +105,7 @@ Vous pouvez faire évoluer l'HTML
     }
 
     // Charge la page demandée
-    $fileController = 'page/'.$routing[$page]['controller'].'.php';
+    $fileController = 'vue/'.$routing[$page]['controller'].'.php';
     if (file_exists($fileController)) {
         require $fileController;
     } else {
