@@ -28,3 +28,23 @@ class Message {
         return $donnees;
     }
 }
+
+class Mail
+{
+    protected $mail = 'snydesign75@gmail.com';
+    protected $subject = 'Transversale';
+    protected $message = 'Message';
+    protected $header = 'From:"De Coton à Soie" <snydesign75@gmail.com>';
+    protected $r = "\r\n";
+
+    function __construct(){
+        if (isset($_POST['nickname'])) {
+            $testMail = mail($this->mail, $this->subject, $this->message);
+            if ($testMail === true) {
+                echo "Message envoyé";   
+            } else {
+                echo "Probleme technique";
+            }
+        }   
+    }
+}
