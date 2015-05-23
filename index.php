@@ -72,7 +72,35 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <title>Du coton a soie</title>
+    <link rel="stylesheet" href="vue/css/default.css">
     <script src="js/jquery-2.1.3.min.js"></script>
+    <?php
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+        if (!isset($routing[$page])) {
+            $page = '404';
+        }
+    }
+    else {
+        $page = 'home';
+    }
+
+    $cssController = 'vue/css/' . $routing[$page]['controller'] . '.css';
+    $jsController = 'vue/script/' . $routing[$page]['controller'] . '.js';
+
+    if (file_exists($cssController)) {
+        echo '<link href="' . $cssController . '" type="text/css" rel="stylesheet">';
+    } else {
+        echo 'File is missing';
+    }
+
+    if (file_exists($jsController)) {
+        echo '<script language="javascript" src="' . $jsController . '">';
+        echo '</script>';
+    }
+    ?>
 </head>
 <body>
     
