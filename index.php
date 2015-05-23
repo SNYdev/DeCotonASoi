@@ -75,7 +75,18 @@
     <script src="js/jquery-2.1.3.min.js"></script>
 </head>
 <body>
+    
+    <img class="motif-wave" alt="motif-wave" src="assets/img/motif-wave.jpg">
 
+    <div class="home-img">
+        <img id="img-home" alt="home-img" src="assets/img/home-img.jpg">
+        <div class="home-txt">
+            <h1>Du coton a soie</h1>
+            <br><br>
+            <cite>Une lingerie faite par vous et pour vous !</cite>
+        </div>   
+    </div>
+    
     <header>
         <div class="nav">
             <ul>
@@ -118,5 +129,71 @@
     }
 
 ?>
+    
+        <div class="mid">
+        <img id="logo-payement" alt="logo-payement" src="assets/img/logo-payement.png">
+        <div class="logo-txt">
+            <b>Payement sécurisé</b>
+        </div>   
+    </div>
+    
+    <div class="mid">
+        <img id="logo-expedition" alt="logo-expedition" src="assets/img/logo-expedition.png">
+        <div class="logo-txt">
+            <b>Prélèvement a l'expédition</b>
+        </div>   
+    </div>
+    
+    <div class="mid">
+        <img id="logo-livraison" alt="logo-livraison" src="assets/img/logo-livraison.png">
+        <div class="logo-txt">
+            <b>Livraison offerte</b>
+        </div>   
+    </div>
+    
+    <div class="mid">
+        <img id="logo-changement" alt="logo-changement" src="assets/img/logo-changement.png">
+        <div class="logo-txt">
+            <b>30 jours pour changer d'avis</b>
+        </div>   
+    </div>
+    
+    <br><br>
+    
+    <div class="bot">
+        <div class="left">
+            <span class="title">MA COMMANDE</span>
+            <br><br>
+            <span class="txt"><a class="none" href="#">Suivi de commande</a><br>
+                <a class="none" href="#">Frais d’envoi</a><br>
+                <a class="none" href="#">Délai de livraison</a><br>
+                <a class="none" href="#">Echange et remboursement</a><br>
+                <a class="none" href="#">Moyens de paiement</a><br></span>
+        </div>
+
+        <div class="right">
+            <span class="title">NOUS CONTACTER</span>
+            <br><br>
+            <span class="txt">06.28.42.93.59<br>
+                maeva.gabriel96@gmaiL.com<br></span>
+        </div>
+            
+        <br><br><br><br>
+        
+        <div class="top">
+            <span class="title">SUIVEZ-NOUS</span>
+            <br><br>
+            <img id="logo-FB" alt="logo-FB" src="assets/img/logo-FB.png">
+            <img id="logo-twitter" alt="logo-twitter" src="assets/img/logo-twitter.png">
+            <img id="logo-insta" alt="logo-insta" src="assets/img/logo-insta.png">
+        </div>       
+    </div>
+    
+    <footer>
+            © 2015 Du conton à soie. All Rights Reserved.
+    </footer>
+    
+    <img class="motif-wave" alt="motif-wave" src="assets/img/motif-wave.jpg">
+    
 </body>
 </html>
