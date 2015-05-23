@@ -36,6 +36,11 @@ class User {
         $requete->execute(array($gender, $firstname, $lastname, $login, sha1($password), $address, $city, $zcode, $email, $newsletter));
     }
 
+    public function updateUser($id, $login, $password, $address, $city, $zcode, $email, $newsletter) {
+        $requete = $this->connection->prepare('UPDATE users SET login=?, motDePasse=?, adresse=?, ville=?, codePostal=?, email=?, newsletter=? WHERE id=?');
+        $requete->execute(array($login, sha1($password), $address, $city, $zcode, $email, $newsletter, $id));
+    }
+
     function getUserByName($name) {
         $request = $this->connection->prepare('SELECT * FROM users WHERE login=?');
         $request->execute(array($name));

@@ -9,7 +9,7 @@
 		if(isset($_POST['password'])) {
 			$response = $user->getUserByEmailAndPassword($_POST['email'], $_POST['password']);
 			if ($response) {
-                $_SESSION['user'] = ['id' => $response['id'], 'name' => $response['login']];
+				$_SESSION['user'] = ['id' => $response['id'], 'firstname' => $response['prenom'], 'lastname' => $response['lastname'], 'gender' => $response['sexe'], 'name' => $response['login']];
 
 				header('Location: http://localhost/DeCotonASoi/');
 				exit;

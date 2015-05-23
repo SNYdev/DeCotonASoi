@@ -8,10 +8,12 @@
     //charge le fichier des fonctions PHP
     require_once 'model/User.php';
     require_once 'model/Message.php';
+    require_once 'model/Stylist.php';
     require_once 'model/Connection.php';
 
     $user = new User(Connection::getConnection());
     $message = new Message(Connection::getConnection());
+    $stylist = new Stylist(Connection::getConnection());
 
     // Liste blanche, c'est notre routing qui correspont à nos pages
     $routing = [

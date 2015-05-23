@@ -1,8 +1,10 @@
 <?php
 echo $_SESSION['user']['name'] . ' est connecté.';
-$messages = $message->getUserByMessage($_SESSION['user']['name']);
+$profile = $user->getUserByName($_SESSION['user']['name']);
 
-foreach ($messages as $key => $value) {
-	echo '<p>' . $value['login'] . " : " . $value['message'] . '</p>';
+foreach ($profile as $key => $value) {
+	echo '<p>' . $key . " : " . $value . '</p>';
 }
 ?>
+
+<a href="?page=profilUpdate" title="Modifier le profil">Modifier le profil</a>
