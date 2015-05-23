@@ -58,7 +58,7 @@
         $page = 'home';
     }
 
-    //check pour la sécurité : si la page à la clée 'secure' est true et que $_SESSION['name'] n'est pas définis
+    //check pour la sécurité  : si la page à la clée 'secure' est true et que $_SESSION['name'] n'est pas définis
     if ($routing[$page]['secure'] === true && !isset($_SESSION['user'])) {
         //Met en session un message informatif
         User::addMessageFlash('info', 'Veuillez-vous connecter afin d\'accéder à cette page');
