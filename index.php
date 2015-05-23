@@ -104,10 +104,10 @@
 </head>
 <body>
     
-    <img class="motif-wave" alt="motif-wave" src="assets/img/motif-wave.jpg">
+    <img class="motif-wave" alt="motif-wave" src="vue/img/motif-wave.jpg">
 
     <div class="home-img">
-        <img id="img-home" alt="home-img" src="assets/img/home-img.jpg">
+        <img id="img-home" alt="home-img" src="vue/img/home-img.jpg">
         <div class="home-txt">
             <h1>Du coton a soie</h1>
             <br><br>
@@ -159,28 +159,28 @@
 ?>
     
         <div class="mid">
-        <img id="logo-payement" alt="logo-payement" src="assets/img/logo-payement.png">
+        <img id="logo-payement" alt="logo-payement" src="vue/img/logo-payement.png">
         <div class="logo-txt">
             <b>Payement sécurisé</b>
         </div>   
     </div>
     
     <div class="mid">
-        <img id="logo-expedition" alt="logo-expedition" src="assets/img/logo-expedition.png">
+        <img id="logo-expedition" alt="logo-expedition" src="vue/img/logo-expedition.png">
         <div class="logo-txt">
             <b>Prélèvement a l'expédition</b>
         </div>   
     </div>
     
     <div class="mid">
-        <img id="logo-livraison" alt="logo-livraison" src="assets/img/logo-livraison.png">
+        <img id="logo-livraison" alt="logo-livraison" src="vue/img/logo-livraison.png">
         <div class="logo-txt">
             <b>Livraison offerte</b>
         </div>   
     </div>
     
     <div class="mid">
-        <img id="logo-changement" alt="logo-changement" src="assets/img/logo-changement.png">
+        <img id="logo-changement" alt="logo-changement" src="vue/img/logo-changement.png">
         <div class="logo-txt">
             <b>30 jours pour changer d'avis</b>
         </div>   
@@ -211,9 +211,9 @@
         <div class="top">
             <span class="title">SUIVEZ-NOUS</span>
             <br><br>
-            <img id="logo-FB" alt="logo-FB" src="assets/img/logo-FB.png">
-            <img id="logo-twitter" alt="logo-twitter" src="assets/img/logo-twitter.png">
-            <img id="logo-insta" alt="logo-insta" src="assets/img/logo-insta.png">
+            <img id="logo-FB" alt="logo-FB" src="vue/img/logo-FB.png">
+            <img id="logo-twitter" alt="logo-twitter" src="vue/img/logo-twitter.png">
+            <img id="logo-insta" alt="logo-insta" src="vue/img/logo-insta.png">
         </div>       
     </div>
     
@@ -221,7 +221,7 @@
             © 2015 Du conton à soie. All Rights Reserved.
     </footer>
     
-    <img class="motif-wave" alt="motif-wave" src="assets/img/motif-wave.jpg">
+    <img class="motif-wave" alt="motif-wave" src="vue/img/motif-wave.jpg">
     
 </body>
 </html>
