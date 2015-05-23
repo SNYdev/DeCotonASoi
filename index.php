@@ -87,8 +87,8 @@
         $page = 'home';
     }
 
-    $cssController = 'vue/css/' . $routing[$page]['controller'] . '.css';
-    $jsController = 'vue/script/' . $routing[$page]['controller'] . '.js';
+    $cssController = './vue/css/' . $routing[$page]['controller'] . '.css';
+    $jsController = './vue/script/' . $routing[$page]['controller'] . '.js';
 
     if (file_exists($cssController)) {
         echo '<link href="' . $cssController . '" type="text/css" rel="stylesheet">';
