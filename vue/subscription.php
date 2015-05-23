@@ -1,16 +1,18 @@
 <form action="" method="post">
-    <p>Prénom* : <input type="text" name="firstname" id="firstname"/></p><p id="error1"></p>
-    <p>Nom* : <input type="text" name="lastname" id="lastname" /></p><p id="error2"></p>
-    <p>Pseudo* : <input type="text" name="login" id="login" /></p><p id="error11"></p>
+    <p>Civilité : <input type="radio" name="gender" value="1" checked/>Madame <input type="radio" name="gender" value="2"/>Monsieur</p>
+    <p>*Prénom : <input type="text" name="firstname" id="firstname"/></p><p id="error1"></p>
+    <p>*Nom : <input type="text" name="lastname" id="lastname" /></p><p id="error2"></p>
+    <p>*Pseudo : <input type="text" name="login" id="login" /></p><p id="error11"></p>
     <p>Mensuration : <input type="text" name="size" id="size" /></p><p id="error3"></p>
-    <p>Adresse* : <input type="text" name="address" id="address" /></p><p id="error4"></p>
-    <p>Ville* : <input type="text" name="city" id="city" /></p><p id="error5"></p>
-    <p>Code postal* : <input type="text" name="zcode" id="zcode" /></p><p id="error6"></p>
-    <p>Email* : <input type="text" name="email" id="email" /></p><p id="error10"></p>
+    <p>*Adresse : <input type="text" name="address" id="address" /></p><p id="error4"></p>
+    <p>*Ville : <input type="text" name="city" id="city" /></p><p id="error5"></p>
+    <p>*Code postal : <input type="text" name="zcode" id="zcode" /></p><p id="error6"></p>
+    <p>*Email : <input type="text" name="email" id="email" /></p><p id="error10"></p>
     <p>Téléphone : <input type="tel" name="tel" id="tel" /></p><p id="error7"></p>
-    <p>Mot de passe* : <input type="password" name="password" id="password" /></p><p id="error8"></p>
-    <p>Vérificaion mot de passe* : <input type="password" name="password_check" id="password_check" /></p><p id="error9"></p>
-	<p><input type="submit" /></p>
+    <p>*Mot de passe : <input type="password" name="password" id="password" /></p><p id="error8"></p>
+    <p>*Vérificaion mot de passe : <input type="password" name="password_check" id="password_check" /></p><p id="error9"></p>
+    <p>Newsletter : <input type="checkbox" name="newsletter" />Je souhaite recevoir les newsletter Du coton à soie</p>
+    <p><input type="submit" /></p>
 </form>
 
 <script>
@@ -99,7 +101,7 @@ if(!empty($_POST['firstname'])  && !empty($_POST['lastname']) && !empty($_POST['
         $user->addMessageFlash('info','Login existe déjà.');
     }
     else {
-        $user->addUser($_POST['firstname'], $_POST['lastname'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email']);
+        $user->addUser($_POST['gender'], $_POST['firstname'], $_POST['lastname'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email']);
         $info = $user->getUserByName($_POST['firstname']);
 
         $_SESSION['user'] = ['id' => $info['id'], 'name' => $info['login']];

@@ -31,9 +31,9 @@ class User {
         return $response;
     }
 
-    public function addUser($firstname, $lastname, $login, $password, $address, $city, $zcode, $email) {
-        $requete = $this->connection->prepare('INSERT INTO users(prenom, nom, login, motDePasse, adresse, ville, codePostal, email) VALUES (?,?,?,?,?,?,?,?)');
-        $requete->execute(array($firstname, $lastname, $login, sha1($password), $address, $city, $zcode, $email));
+    public function addUser($gender, $firstname, $lastname, $login, $password, $address, $city, $zcode, $email, $newsletter) {
+        $requete = $this->connection->prepare('INSERT INTO users(sexe, prenom, nom, login, motDePasse, adresse, ville, codePostal, email) VALUES (?,?,?,?,?,?,?,?,?,?)');
+        $requete->execute(array($gender, $firstname, $lastname, $login, sha1($password), $address, $city, $zcode, $email, $newsletter));
     }
 
     function getUserByName($name) {
@@ -44,9 +44,9 @@ class User {
         return $user;
     }
 
-    public function getUserByNameAndPassword($name, $password) {
-        $request = $this->connection->prepare('SELECT * FROM users WHERE login=? AND password=?');
-        $request->execute(array($name, sha1($password)));
+    public function getUserByEmailAndPassword($email, $password) {
+        $request = $this->connection->prepare('SELECT * FROM users WHERE email=? AND motDePasse=?');
+        $request->execute(array($email, sha1($password)));
         $user = $request->fetch();
 
         return $user;
