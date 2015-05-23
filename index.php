@@ -76,19 +76,24 @@
 </head>
 <body>
 
-<ul>
-    <li><a href="?page=home" title="home">Home</a></li>
-    <li><a href="?page=message" title="message">Message</a></li>
-    <li><a href="?page=inscription" title="inscription">Inscription</a></li>
-    <?php
-    if (isset($_SESSION['user'])) {
-        echo '<li><a href="?page=profil" title="profil">Profil</a></li>';
-        echo '<li><a href="?page=logout" title="logout">Logout</a></li>';
-    } else {
-        echo '<li><a href="?page=login" title="login">Login</a></li>';
-    }
-    ?>
-</ul>
+    <header>
+        <div class="nav">
+            <ul>
+                <li class="Accueil"><a class="active" href="index.php">Accueil</a></li>
+                <li class="Stylistes"><a href="stylistes1.php">Stylistes</a></li>
+                
+                <?php
+                if (isset($_SESSION['user'])) {
+                    echo '<li><a href="?page=profil" title="profil">Profil</a></li>';
+                    echo '<li><a href="?page=logout" title="logout">Logout</a></li>';
+                } else {
+                    echo '<li class="Connexion"><a href="login.php">Connexion</a></li>';
+                }
+                ?>
+                <li class="Contact"><a href="#">Contact</a></li>
+            </ul>
+            </div>
+    </header>
 
 <?php
 
