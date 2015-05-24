@@ -1,7 +1,15 @@
 <form action="" method="post">
-    <p>Civilité : <input type="radio" name="gender" value="1" checked/>Madame <input type="radio" name="gender" value="2"/>Monsieur</p>
-    <p>*Prénom : <input type="text" name="firstname" id="firstname"/></p><p id="error1"></p>
-    <p>*Nom : <input type="text" name="lastname" id="lastname" /></p><p id="error2"></p>
+    <p>Civilité : <?php
+        if($_SESSION['user']['gender'] === 1) {
+            echo "Madame";
+        }
+        else {
+            echo "Monsieur";
+        }
+        ?>
+    </p>
+    <p>Prénom : <?php echo $_SESSION['user']['firstname']; ?></p>
+    <p>Nom : <?php echo $_SESSION['user']['lastname']; ?></p></p>
     <p>*Pseudo : <input type="text" name="login" id="login" /></p><p id="error11"></p>
     <p>Mensuration : <input type="text" name="size" id="size" /></p><p id="error3"></p>
     <p>*Adresse : <input type="text" name="address" id="address" /></p><p id="error4"></p>
@@ -16,26 +24,7 @@
 </form>
 
 <script>
-    // Indique en temps réel au visiteur si le formulaire est rempli correctement
     $(function() {
-        $("#firstname").change(function () {
-            if ($(this).val().length < 2) {
-                $("#error1").html("Prénom trop court");
-            }
-            else {
-                $("#error1").html("")
-            }
-        });
-
-        $("#lastname").change(function () {
-            if ($("#lastname").val().length < 2) {
-                $("#error2").html("Nom trop court");
-            }
-            else {
-                $("#error2").html("")
-            }
-        });
-
         $("#login").change(function () {
             if ($(this).val().length < 2) {
                 $("#error11").html("Pseudo trop court");
@@ -95,22 +84,19 @@
 </script>
 
 <?php
-// Double vérification du formulaire
-if(!empty($_POST['firstname'])  && !empty($_POST['lastname']) && !empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['firstname']) >= 2) && (strlen($_POST['lastname']) >= 2) && (strlen($_POST['login']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
-
-    // Vérifie si le login existe en bdd
+if(!empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['login']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
     $count = $user->countUserByName($_POST['login']);
 
     if($count['nb_user']) {
         $user->addMessageFlash('info','Login existe déjà.');
     }
     else {
-        $user->addUser($_POST['gender'], $_POST['firstname'], $_POST['lastname'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['newsletter']);
+        $user->updateUser($_SESSION['id'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['newsletter']);
         $info = $user->getUserByName($_POST['firstname']);
 
-        $_SESSION['user'] = ['id' => $info['id'], 'firstname' => $info['prenom'], 'lastname' => $info['lastname'], 'gender' => $info['sexe'], 'name' => $info['login']];
+        $_SESSION['user'] = ['name' => $info['login']];
 
-        $user->addMessageFlash('success','Inscription réussie !');
+        $user->addMessageFlash('success','Modification réussie !');
 
         header('Location: http://localhost/DeCotonASoi/');
 

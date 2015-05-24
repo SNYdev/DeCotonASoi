@@ -1,0 +1,361 @@
+@font-face {
+	font-family: 'Kenzo';
+	src: url('../fonts/Kenzo-Regular.otf');
+}
+
+@font-face {
+	font-family: 'OpenSans-light';
+	src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+	font-family: 'Mission';
+	src: url('../fonts/Mission-Script.otf');
+}
+
+body{
+	height: 2050px;
+	background-color: #edaf86;
+}
+
+	.main{
+		width: 1200px;
+		height: 3008px;
+		/*background-color: yellow;*/
+		margin: auto;
+		overflow: hidden;
+		/*box-shadow: 0px 0px 160px 0px #edcdb7;*/
+	}
+
+		.header{
+			height: 43px;
+			background-image: url(../img/motifhead.jpg);
+			text-align: center;
+		}
+
+			#logosHeader{
+				/*padding-left: 128px;*/
+			}
+
+		.banner{
+			height: 450px;
+			background-image: url(../img/home-img2.jpg);
+			position: center;
+		}
+
+			.txtBanner{
+				height: 450px;
+				background-color: rgba(255, 255, 255, 0.3);
+				text-align: center;
+				color: white;
+			}
+
+				.bannerTitle{
+					font-family: 'Mission';
+					font-size: 80px;
+					padding-top: 140px;
+				}
+
+				.bannerContent{
+					font-family: 'OpenSans-Light';
+					font-size: 30px;
+				}
+
+		.nav{
+			height: 70px;
+			background-color: white;
+		}
+
+			.navUlDcas{
+				width: 428px;
+				margin: auto;
+			}
+
+				.navLiDcas{
+					float: left;
+					padding-left: 10px;
+					padding-right: 10px;
+					font-family: 'Kenzo';
+					font-size: 20px;
+					letter-spacing: 3px;
+					padding-top: 23px;
+				}
+
+				.linkNav{
+					text-decoration: none;
+					cursor: pointer;
+					color: #3b4a5a;
+				}
+
+				.linkNav:hover{
+					cursor: pointer;
+					color: #95b9c7;
+				}
+
+		.tutoWebsite{
+			height: 400px;
+			background-color: #f9f9f9;
+		}
+
+			.listTuto{
+				width: 880px;
+				height: 242px;
+				margin: auto;
+				padding-top: 70px;
+			}
+
+				.li{
+					float: left;
+				}
+
+					.imgTuto{
+						float: left;
+						margin-right: 20px;
+					}
+
+		.stylist{
+			height: 500px;
+			background-color: white;
+		}
+
+			.txtStylist{
+				width: 340px;
+				height: 500px;
+				/*background-color: green;*/
+				margin-left: 50px;
+				float: left;
+			}
+
+				.titleStylist{
+					font-family: 'Kenzo';
+					color: #edaf86;
+					font-size: 40px;
+					padding-top: 80px;
+					padding-bottom: 10px;
+				}
+
+				.subTitleStylist{
+					font-family: 'Kenzo';
+					color: #95b9c7;
+					padding-bottom: 30px;
+				}
+
+				.areaTxt{
+					font-family: 'OpenSans-Light';
+					font-weight: lighter;
+					line-height: 25px;
+					color: #909090;
+				}
+
+			.imgStylist{
+				height: 500px;
+				overflow: hidden;
+				float: left;
+			}
+
+				.carre{
+					height: 500px;
+					position: absolute;
+					/*background-color: red;*/
+					overflow: hidden;
+					padding-left: 30px;
+				}
+
+					#allStylist{
+						padding-top: 30px;
+						padding-left: 50px;
+					}
+
+		.information{
+			height: 500px;
+			background-color: #fafafa;
+		}
+			.firstLineImg{
+				padding-top: 22px;
+			}
+
+			.firstLineImg, .secondLineImg, .thirdLineImg{
+				padding-left: 70px;
+			}
+
+			.imgInformation{
+				width: 50%;
+				height: 500px;
+				float: left;
+			}
+
+			.txtInformation{
+				width: 50%;
+				height: 500px;
+				float: left;
+			}
+
+				.titleInformation{
+					font-family: 'Kenzo';
+					color: #edaf86;
+					font-size: 40px;
+					padding-top: 100px;
+					padding-bottom: 10px;
+				}
+
+				.subTitleInformation{
+					font-family: 'Kenzo';
+					color: #95b9c7;
+					padding-bottom: 30px;
+				}
+
+				.areaTxtInformation{
+					width: 540px;
+					font-family: 'OpenSans-Light';
+					font-weight: lighter;
+					color: #909090;
+					line-height: 30px;
+				}
+
+		.membership{
+			height: 500px;
+			background-image: url(../img/abo-img.jpg);
+		}
+
+		.begin{
+			height: auto;
+			background-color: #fafafa;
+		}
+
+			.contentBegin{
+				height: 80px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+
+				.txtBegin{
+					float: left;
+					padding-left: 180px;
+				}
+
+					.titleBegin{
+						font-family: 'Kenzo';
+						font-size: 40px;
+						padding-bottom: 10px;
+						color: #909090;
+					}
+
+					.subTitleBegin{
+						font-family: 'Kenzo';
+						padding-bottom: 30px;
+						letter-spacing: 3px;
+						color: #95b9c7;
+					}
+
+					.buttonBegin{
+						background-color: orange;
+						border : 0px;
+						font-family: 'Kenzo';
+						padding: 20px;
+						margin-top: 5px;
+						margin-left: 60px;
+						font-size: 25px;
+						color: white;
+						border-radius: 2px;
+					}
+
+					.areaBegin{
+						font-family: 'OpenSans-Light';
+						font-weight: lighter;
+						line-height: 18px;
+					}
+
+		.footer{
+			height: 473px;
+			background-color: white;
+		}
+
+			.mainFooter{
+				width: 900px;
+				height: 425px;
+				background-color: white;
+				margin: auto;
+			}
+
+				.iconeDCAS{
+					width: 100%;
+					height: 100px;
+					padding-top: 60px;
+					padding-bottom: 60px;
+					/*background-color: red;*/
+				}
+
+					.iconeIMG{
+						text-align: center;
+						float: left;
+						width: 225px;
+						height: 100px;
+						/*background-color: yellow;*/
+						font-family: 'OpenSans-Light';
+					}
+
+					#Psecurity{
+						padding-top: 10px;
+					}
+					#Pexpedition{
+						padding-top: 3px;
+					}
+					#Poffer{
+						padding-top: 13px;
+					}
+					#Pdays{
+						padding-top: 3px;
+					}
+
+				#barre{
+					height: 2px;
+					background-color: black;
+				}
+
+				.moreInformation{
+					height: 150px;
+					/*background-color: red;*/
+					padding-top: 50px;
+
+				}
+
+					.contactInformation{
+						width: 300px;
+						height: 200px;
+						/*background-color: yellow;*/
+						float: left;
+						margin-left: 40px;
+					}
+
+					.linkFooter{
+						text-decoration: none;
+					}
+
+				.contact{
+					width: 300px;
+					height: 200px;
+					/*background-color: pink;*/
+					float: left;
+				}
+
+					.h1Information{
+						font-family: 'Kenzo';
+						font-size: 25px;
+					}
+
+					.liInformation{
+						font-family: 'OpenSans-Light';
+						line-height: 18px;
+						padding-top: 10px;
+					}
+
+				.socialNetwork{
+					/*clear: both;*/
+					padding-left: 40px;
+					letter-spacing: 3px;
+				}
+				
+					.contactIcone{
+						padding-top: 10px;
+						cursor: pointer;
+					}
