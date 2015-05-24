@@ -147,6 +147,13 @@ body{
 			height: 500px;
 			background-color: #fafafa;
 		}
+			.firstLineImg{
+				padding-top: 22px;
+			}
+
+			.firstLineImg, .secondLineImg, .thirdLineImg{
+				padding-left: 70px;
+			}
 
 			.imgInformation{
 				width: 50%;
@@ -163,7 +170,7 @@ body{
 				.titleInformation{
 					font-family: 'Kenzo';
 					font-size: 40px;
-					padding-top: 80px;
+					padding-top: 100px;
 					padding-bottom: 10px;
 				}
 
