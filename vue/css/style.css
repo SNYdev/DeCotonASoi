@@ -15,20 +15,27 @@
 
 body{
 	height: 2050px;
-	background-color: #c9bab5;
+	background-color: #edaf86;
 }
 
 	.main{
 		width: 1200px;
 		height: 3008px;
-		background-color: yellow;
+		/*background-color: yellow;*/
 		margin: auto;
+		overflow: hidden;
+		box-shadow: 5px;
 	}
 
 		.header{
 			height: 43px;
 			background-image: url(../img/motifhead.jpg);
+			text-align: center;
 		}
+
+			#logosHeader{
+				/*padding-left: 128px;*/
+			}
 
 		.banner{
 			height: 450px;
@@ -87,7 +94,7 @@ body{
 
 		.tutoWebsite{
 			height: 400px;
-			background-color: #fafafa;
+			background-color: #f9f9f9;
 		}
 
 			.listTuto{
@@ -121,6 +128,7 @@ body{
 
 				.titleStylist{
 					font-family: 'Kenzo';
+					color: #edaf86;
 					font-size: 40px;
 					padding-top: 80px;
 					padding-bottom: 10px;
@@ -128,6 +136,7 @@ body{
 
 				.subTitleStylist{
 					font-family: 'Kenzo';
+					color: #95b9c7;
 					padding-bottom: 30px;
 				}
 
@@ -135,13 +144,27 @@ body{
 					font-family: 'OpenSans-Light';
 					font-weight: lighter;
 					line-height: 25px;
+					color: #909090;
 				}
 
 			.imgStylist{
-				width: 300px;
 				height: 500px;
+				overflow: hidden;
 				float: left;
 			}
+
+				.carre{
+					height: 500px;
+					position: absolute;
+					/*background-color: red;*/
+					overflow: hidden;
+					padding-left: 30px;
+				}
+
+					#allStylist{
+						padding-top: 30px;
+						padding-left: 50px;
+					}
 
 		.information{
 			height: 500px;
@@ -169,6 +192,7 @@ body{
 
 				.titleInformation{
 					font-family: 'Kenzo';
+					color: #edaf86;
 					font-size: 40px;
 					padding-top: 100px;
 					padding-bottom: 10px;
@@ -176,6 +200,7 @@ body{
 
 				.subTitleInformation{
 					font-family: 'Kenzo';
+					color: #95b9c7;
 					padding-bottom: 30px;
 				}
 
@@ -183,6 +208,7 @@ body{
 					width: 540px;
 					font-family: 'OpenSans-Light';
 					font-weight: lighter;
+					color: #909090;
 					line-height: 30px;
 				}
 
@@ -211,12 +237,14 @@ body{
 						font-family: 'Kenzo';
 						font-size: 40px;
 						padding-bottom: 10px;
+						color: #909090;
 					}
 
 					.subTitleBegin{
 						font-family: 'Kenzo';
 						padding-bottom: 30px;
 						letter-spacing: 3px;
+						color: #95b9c7;
 					}
 
 					.buttonBegin{
@@ -227,6 +255,8 @@ body{
 						margin-top: 5px;
 						margin-left: 60px;
 						font-size: 25px;
+						color: white;
+						border-radius: 2px;
 					}
 
 					.areaBegin{
