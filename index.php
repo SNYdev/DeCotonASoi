@@ -11,6 +11,7 @@
     require_once 'model/Stylist.php';
     require_once 'model/Evaluation.php';
     require_once 'model/Connection.php';
+    require_once 'model/Mail.php';
 
     $user = new User(Connection::getConnection());
     $message = new Message(Connection::getConnection());
