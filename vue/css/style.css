@@ -15,7 +15,7 @@
 
 body{
 	height: 2050px;
-	background-color: #edaf86;
+	background-color: #e5d9d1;
 }
 
 	.main{
@@ -30,11 +30,10 @@ body{
 		.header{
 			height: 43px;
 			background-image: url(../img/motifhead.jpg);
-			text-align: center;
 		}
 
 			#logosHeader{
-				/*padding-left: 128px;*/
+				padding-left: 128px;
 			}
 
 		.banner{
@@ -145,6 +144,7 @@ body{
 					font-weight: lighter;
 					line-height: 25px;
 					color: #909090;
+					padding-bottom: 20px;
 				}
 
 			.imgStylist{
@@ -230,7 +230,7 @@ body{
 
 				.txtBegin{
 					float: left;
-					padding-left: 180px;
+					padding-left: 203px;
 				}
 
 					.titleBegin{
@@ -257,6 +257,7 @@ body{
 						font-size: 25px;
 						color: white;
 						border-radius: 2px;
+						cursor: pointer;
 					}
 
 					.areaBegin{
