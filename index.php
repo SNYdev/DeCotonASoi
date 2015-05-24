@@ -78,11 +78,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="viewport">
     <title>Du coton a soie</title>
-    <link rel="stylesheet" href="vue/css/default.css">
+    <link rel="stylesheet" type="text/css" href="vue/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="vue/css/style.css">
     <script src="js/jquery-2.1.3.min.js"></script>
-    <?php
+<?php
     // Charge le CSS/JS de la page demandée
     $cssController = './vue/css/' . $routing[$page]['controller'] . '.css';
     $jsController = './vue/script/' . $routing[$page]['controller'] . '.js';
@@ -97,129 +98,149 @@
         echo '<script language="javascript" src="' . $jsController . '">';
         echo '</script>';
     }
-    ?>
+?>
 </head>
 <body>
-    
-    <img class="motif-wave" alt="motif-wave" src="vue/img/motif-wave.jpg">
-
-    <div class="home-img">
-        <img id="img-home" alt="home-img" src="vue/img/home-img.jpg">
-        <div class="home-txt">
-            <h1>Du coton a soie</h1>
-            <br><br>
-            <cite>Une lingerie faite par vous et pour vous !</cite>
-        </div>   
-    </div>
-    
-    <header>
-        <div class="nav">
-            <ul>
-                <li class="Accueil"><a class="active" href="index.php">Accueil</a></li>
-                <li class="Stylistes"><a href="stylistes1.php">Stylistes</a></li>
-                
-                <?php
-                // Lien cachés si le visiteur n'est pas connecté
-                if (isset($_SESSION['user'])) {
-                    echo '<li><a href="?page=profil" title="profil">Profil</a></li>';
-                    echo '<li><a href="?page=logout" title="logout">Logout</a></li>';
-                } else {
-                    echo '<li class="Connexion"><a href="login.php">Connexion</a></li>';
-                }
-                ?>
-                <li class="Contact"><a href="#">Contact</a></li>
-            </ul>
+    <div class="main">
+        <div class="header">
+        </div>
+        <div class="banner">
+            <div class="txtBanner">
+                <h1 class="bannerTitle">De Coton à Soie</h1>
+                <h2 class="bannerContent">Une lingerie fait par vous et pour vous</h2>
             </div>
-    </header>
-
+        </div>
+        <div class="nav">
+            <ul class="navUlDcas">
+                <li class="navLiDcas"><a class="linkNav" href="">Accueil</a></li>
+                <li class="navLiDcas"><a class="linkNav" href="">Stylistes</a></li>
+                <li class="navLiDcas"><a class="linkNav" href="">Connexion</a></li>
+                <li class="navLiDcas"><a class="linkNav" href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="tutoWebsite">
+            <ul class="listTuto">
+                <li><img class="imgTuto" src="vue/img/tuto1.jpg"></li>
+                <li><img class="imgTuto" src="vue/img/tuto2.jpg"></li>
+                <li><img class="imgTuto" src="vue/img/tuto3.jpg"></li>
+                <li><img class="imgTuto" src="vue/img/tuto4.jpg"></li>
+            </ul>
+        </div>
+        <div class="stylist">
+            <div class="txtStylist">
+                <h1 class="titleStylist">Nos stylistes</h1>
+                <h2 class="subTitleStylist">Meet the team</h2>
+                <p class="areaTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit, arcu et tempus aliquam, felis massa semper mi, at vestibulum nisl lorem a sem. Donec libero sem, tincidunt sed feugiat eget, lobortis vitae erat. Aliquam pulvinar velit vel feugiat tempor. Etiam diam risus, eleifend sed ornare sit amet, cursus nec orci. Suspendisse sollicitudin leo vitae quam feugiat pharetra. Pellentesque interdum, </p>
+            </div>
+            <div class="imgStylist">
+            </div>
+        </div>
+        <div class="information">
+            <div class="imgInformation">
+            </div>
+            <div class="txtInformation">
+                <h1 class="titleInformation">Qui somme-nous ?</h1>
+                <h2 class="subTitleInformation">Spécialiste dans le domaine de lingerie personnalisée.</h2>
+                <p class="areaTxtInformation">Nous mettons à votre disposition une équipe de styliste avec des styles divers et variés :
+                Choisissez le styliste qui colle le plus à votre style, il vous aidera à concevoir votre lingerie.<br>
+                Rentrez vos mesures, votre lingerie vous ira comme un gant.<br>
+                Personnalisez votre lingerie, elle sera unique au monde</p>
+            </div>
+        </div>
+        <div class="membership">
+        </div>
+        <div class="begin">
+            <div class="contentBegin">
+                <div class="txtBegin">
+                    <h1 class="titleBegin">Pret pour commencer l'aventure ?</h1>
+                    <h2 class="subTitleBegin">Pour créer votre lingerie, laissez vous guider par nos etapes</h2>
+                </div>
+                <input type="button" class="buttonBegin" value="A toi de jouer !">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="mainFooter">
+                <div class="iconeDCAS">
+                    <div class="iconeIMG">
+                        <img src="vue/img/logo-payement.png" width='70px'>
+                        <p class="iconeTxt" id="Psecurity">Paiement securisé</p>
+                    </div>
+                    <div class="iconeIMG">
+                        <img src="vue/img/logo-livraison.png" width='70px'>
+                        <p class="iconeTxt" id="Pexpedition">Paiement à l'expedition</p>
+                    </div>
+                    <div class="iconeIMG">
+                        <img src="vue/img/logo-expedition.png" width='90px'>
+                        <p class="iconeTxt" id="Poffer">Livraison offerte</p>
+                    </div>
+                    <div class="iconeIMG">
+                        <img src="vue/img/logo-changement.png" width='50px'>
+                        <p class="iconeTxt" id="Pdays">30 jours pour changer d'avis</p>
+                    </div>
+                </div>
+                <div id="barre">
+                </div>
+                <div class="moreInformation">
+                    <div class="contactInformation">
+                        <h1 class="h1Information">Ma commande<br></h1>
+                        <ul class="liInformation">
+                            <li><a class="linkFooter" href="">Suivi de commande</a></li>
+                            <li><a class="linkFooter" href="">Frais d'envoie</a></li>
+                            <li><a class="linkFooter" href="">Délai de livraison</a></li>
+                            <li><a class="linkFooter" href="">Echange et remboursement</a></li>
+                            <li><a class="linkFooter" href="">Moyen de paiement</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact">
+                        <h1 class="h1Information">Nous contacter</h1>
+                        <ul class="liInformation">
+                            <li>06.28.42.93.59</li>
+                            <li>maeva.gabriel96@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="socialNetwork">
+                        <h1 class="h1Information" id="followBlock">Suivez-Nous</h1>
+                        <div class="contactIcone">
+                            <img src="vue/img/facebook-icon-flat.png" width="40px">
+                            <img src="vue/img/logo-Twitter.png" width="40px">
+                            <img src="vue/img/logo-insta.jpg" width="40px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>              
+<?php
+                // Lien cachés si le visiteur n'est pas connecté
+                // if (isset($_SESSION['user'])) {
+                //     echo '<li><a href="?page=profil" title="profil">Profil</a></li>';
+                //     echo '<li><a href="?page=logout" title="logout">Logout</a></li>';
+                // } else {
+                //     echo '<li class="Connexion"><a href="login.php">Connexion</a></li>';
+                // }
+?>
 <?php
 
 
     // Affiche les flashBag : des messages informatif du genre "votre message a bien été envoyé"
-    if (isset($_SESSION['flashBag'])) {
-        foreach ($_SESSION['flashBag'] as $type => $flash) {
-            foreach ($flash as $key => $message) {
-                echo '<div class="'.$type.'" role="'.$type.'" >'.$message.'</div>';
-                // un fois affiché le message doit être supprimé
-                unset($_SESSION['flashBag'][$type][$key]);
-            }
-        }
-    }
+    // if (isset($_SESSION['flashBag'])) {
+    //     foreach ($_SESSION['flashBag'] as $type => $flash) {
+    //         foreach ($flash as $key => $message) {
+    //             echo '<div class="'.$type.'" role="'.$type.'" >'.$message.'</div>';
+    //             // un fois affiché le message doit être supprimé
+    //             unset($_SESSION['flashBag'][$type][$key]);
+    //         }
+    //     }
+    // }
 
-    // Charge la page demandée
-    $fileController = 'vue/'.$routing[$page]['controller'].'.php';
-    if (file_exists($fileController)) {
-        require $fileController;
-    } else {
-        echo 'File is missing';
-    }
-
+    // // Charge la page demandée
+    // $fileController = 'vue/'.$routing[$page]['controller'].'.php';
+    // if (file_exists($fileController)) {
+    //     require $fileController;
+    // } else {
+    //     echo 'File is missing';
+    // }
 ?>
-    
-        <div class="mid">
-        <img id="logo-payement" alt="logo-payement" src="vue/img/logo-payement.png">
-        <div class="logo-txt">
-            <b>Payement sécurisé</b>
-        </div>   
-    </div>
-    
-    <div class="mid">
-        <img id="logo-expedition" alt="logo-expedition" src="vue/img/logo-expedition.png">
-        <div class="logo-txt">
-            <b>Prélèvement a l'expédition</b>
-        </div>   
-    </div>
-    
-    <div class="mid">
-        <img id="logo-livraison" alt="logo-livraison" src="vue/img/logo-livraison.png">
-        <div class="logo-txt">
-            <b>Livraison offerte</b>
-        </div>   
-    </div>
-    
-    <div class="mid">
-        <img id="logo-changement" alt="logo-changement" src="vue/img/logo-changement.png">
-        <div class="logo-txt">
-            <b>30 jours pour changer d'avis</b>
-        </div>   
-    </div>
-    
-    <br><br>
-    
-    <div class="bot">
-        <div class="left">
-            <span class="title">MA COMMANDE</span>
-            <br><br>
-            <span class="txt"><a class="none" href="#">Suivi de commande</a><br>
-                <a class="none" href="#">Frais d’envoi</a><br>
-                <a class="none" href="#">Délai de livraison</a><br>
-                <a class="none" href="#">Echange et remboursement</a><br>
-                <a class="none" href="#">Moyens de paiement</a><br></span>
-        </div>
-
-        <div class="right">
-            <span class="title">NOUS CONTACTER</span>
-            <br><br>
-            <span class="txt">06.28.42.93.59<br>
-                maeva.gabriel96@gmaiL.com<br></span>
-        </div>
-            
-        <br><br><br><br>
-        
-        <div class="top">
-            <span class="title">SUIVEZ-NOUS</span>
-            <br><br>
-            <img id="logo-FB" alt="logo-FB" src="vue/img/logo-FB.png">
-            <img id="logo-twitter" alt="logo-twitter" src="vue/img/logo-twitter.png">
-            <img id="logo-insta" alt="logo-insta" src="vue/img/logo-insta.png">
-        </div>       
-    </div>
-    
-    <footer>
-            © 2015 Du conton à soie. All Rights Reserved.
-    </footer>
-    
-    <img class="motif-wave" alt="motif-wave" src="vue/img/motif-wave.jpg">
     
 </body>
 </html>
