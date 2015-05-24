@@ -1,9 +1,11 @@
 <?php
+// On récupère le nom et prénom du styliste
 $stylistController = explode('', $_GET['name']);
 $stylistFirstname = $stylistController[0];
 $stylistLastname = $stylistController[1];
 
 if (isset($stylistFirstname) && isset($stylistLastname)) {
+    // On récupère les informations du styliste en bdd
     $getStylist = $stylist->getStylistByFirstnameAndLastname($stylistFirstname, $stylistLastname);
     $stylistId = $getStylist['id'];
 
@@ -12,9 +14,10 @@ if (isset($stylistFirstname) && isset($stylistLastname)) {
     echo $getStylist['nom'];
     echo $getStylist['sexe'];
 
+    // On récupère la note globale du styliste en bdd
     $overallEval = $eval->overallEval($stylistId);
 
-
+    // Si le visiteur est connecté, on lui propose de noter le styliste s'il ne l'a pas encore fait. S'il l'a fait, on lui indique la note qu'il lui a donné
     if(isset($_SESSION['user'])) {
         $userEval = $eval->showUserEval($_SESSION['user']['id'], $stylistId);
         if($userEval) {
@@ -41,6 +44,7 @@ if (isset($stylistFirstname) && isset($stylistLastname)) {
     echo $getStylist['description'];
     echo $getStylist['email'];
 
+    // On affiche 3 créations du styliste
     for($i=1; $i<4 ; $i++) {
         echo "<img src=\"img/imgStylist" . $stylistId . "/" . $i . ".png alt =\"1\">";
     }

@@ -16,6 +16,7 @@
 </form>
 
 <script>
+    // Indique en temps réel au visiteur si le formulaire est rempli correctement
     $(function() {
         $("#firstname").change(function () {
             if ($(this).val().length < 2) {
@@ -94,7 +95,10 @@
 </script>
 
 <?php
+// Double vérification du formulaire
 if(!empty($_POST['firstname'])  && !empty($_POST['lastname']) && !empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['firstname']) >= 2) && (strlen($_POST['lastname']) >= 2) && (strlen($_POST['login']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
+
+    // Vérifie si le login existe en bdd
     $count = $user->countUserByName($_POST['login']);
 
     if($count['nb_user']) {

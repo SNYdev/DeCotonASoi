@@ -5,8 +5,8 @@
 </form>
 
 <?php
-	if(isset($_POST['email'])) {
-		if(isset($_POST['password'])) {
+	if(!empty($_POST['email'])) {
+		if(!empty($_POST['password'])) {
 			$response = $user->getUserByEmailAndPassword($_POST['email'], $_POST['password']);
 			if ($response) {
 				$_SESSION['user'] = ['id' => $response['id'], 'firstname' => $response['prenom'], 'lastname' => $response['lastname'], 'gender' => $response['sexe'], 'name' => $response['login']];

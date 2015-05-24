@@ -82,16 +82,7 @@
     <link rel="stylesheet" href="vue/css/default.css">
     <script src="js/jquery-2.1.3.min.js"></script>
     <?php
-    if (isset($_GET['page'])) {
-        $page = $_GET['page'];
-        if (!isset($routing[$page])) {
-            $page = '404';
-        }
-    }
-    else {
-        $page = 'home';
-    }
-
+    // Charge le CSS/JS de la page demandée
     $cssController = './vue/css/' . $routing[$page]['controller'] . '.css';
     $jsController = './vue/script/' . $routing[$page]['controller'] . '.js';
 
@@ -127,6 +118,7 @@
                 <li class="Stylistes"><a href="stylistes1.php">Stylistes</a></li>
                 
                 <?php
+                // Lien cachés si le visiteur n'est pas connecté
                 if (isset($_SESSION['user'])) {
                     echo '<li><a href="?page=profil" title="profil">Profil</a></li>';
                     echo '<li><a href="?page=logout" title="logout">Logout</a></li>';
