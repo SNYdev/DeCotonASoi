@@ -82,6 +82,7 @@
     <title>Du coton a soie</title>
     <link rel="stylesheet" type="text/css" href="vue/css/reset.css">
     <link rel="stylesheet" type="text/css" href="vue/css/style.css">
+    <link rel="icon" type="image/png" href="vue/img/favicon.png"/>
     <script src="js/jquery-2.1.3.min.js"></script>
 <?php
     // Charge le CSS/JS de la page demandée
@@ -103,6 +104,7 @@
 <body>
     <div class="main">
         <div class="header">
+            <img id="logosHeader" src="vue/img/LOGO-Projet-Transversale.svg" width="100px">
         </div>
         <div class="banner">
             <div class="txtBanner">
@@ -112,10 +114,17 @@
         </div>
         <div class="nav">
             <ul class="navUlDcas">
-                <li class="navLiDcas"><a class="linkNav" href="">Accueil</a></li>
-                <li class="navLiDcas"><a class="linkNav" href="">Stylistes</a></li>
-                <li class="navLiDcas"><a class="linkNav" href="">Connexion</a></li>
-                <li class="navLiDcas"><a class="linkNav" href="">Contact</a></li>
+                <li class="navLiDcas"><a class="linkNav" href="?page=home">Accueil</a></li>
+                <li class="navLiDcas"><a class="linkNav" href="?page=stylist">Stylistes</a></li>
+                <?php
+                    if (isset($_SESSION['user'])) {
+                        echo '<li class="navLiDcas"><a class="linkNav" href="#">Logout</a></li>';
+                        echo '<li class="navLiDcas"><a class="linkNav" href="#">Profil</a></li>';
+                    } else {
+                        echo '<li class="navLiDcas"><a class="linkNav" href="#">Connexion</a></li>';
+                    }
+                ?>
+                <li class="navLiDcas"><a class="linkNav" href="?page=home">Contact</a></li>
             </ul>
         </div>
         <div class="tutoWebsite">
@@ -133,10 +142,26 @@
                 <p class="areaTxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit, arcu et tempus aliquam, felis massa semper mi, at vestibulum nisl lorem a sem. Donec libero sem, tincidunt sed feugiat eget, lobortis vitae erat. Aliquam pulvinar velit vel feugiat tempor. Etiam diam risus, eleifend sed ornare sit amet, cursus nec orci. Suspendisse sollicitudin leo vitae quam feugiat pharetra. Pellentesque interdum, </p>
             </div>
             <div class="imgStylist">
+                <div class="carre" id="img1">
+                    <img id="allStylist" src="vue/img/img-stylist.png">
+                </div>
             </div>
         </div>
         <div class="information">
             <div class="imgInformation">
+                <div class="firstLineImg">
+                    <img src="vue/img/maeva-gabriel.jpg" width="150px">
+                    <img src="vue/img/hugo-seguin.jpg" width="150px">
+                </div>
+                <div class="secondLineImg" width="150px">
+                    <img src="vue/img/jeremy-deluze.jpg" width="150px" height='150px'>
+                    <img src="vue/img/mathieu-phung.jpg" width="150px">
+                    <img src="vue/img/yanis-sahnoune.jpg" width="150px">
+                </div>
+                <div class="thirdLineImg" width="150px">
+                    <img src="vue/img/florent-laize.jpg" width="150px">
+                    <img src="vue/img/paul-vernaz.jpg" width="150px">
+                </div>
             </div>
             <div class="txtInformation">
                 <h1 class="titleInformation">Qui somme-nous ?</h1>
@@ -211,36 +236,28 @@
         </div>
     </div>              
 <?php
-                // Lien cachés si le visiteur n'est pas connecté
-                // if (isset($_SESSION['user'])) {
-                //     echo '<li><a href="?page=profil" title="profil">Profil</a></li>';
-                //     echo '<li><a href="?page=logout" title="logout">Logout</a></li>';
-                // } else {
-                //     echo '<li class="Connexion"><a href="login.php">Connexion</a></li>';
-                // }
-?>
-<?php
 
 
     // Affiche les flashBag : des messages informatif du genre "votre message a bien été envoyé"
-    // if (isset($_SESSION['flashBag'])) {
-    //     foreach ($_SESSION['flashBag'] as $type => $flash) {
-    //         foreach ($flash as $key => $message) {
-    //             echo '<div class="'.$type.'" role="'.$type.'" >'.$message.'</div>';
-    //             // un fois affiché le message doit être supprimé
-    //             unset($_SESSION['flashBag'][$type][$key]);
-    //         }
-    //     }
-    // }
+    if (isset($_SESSION['flashBag'])) {
+        foreach ($_SESSION['flashBag'] as $type => $flash) {
+            foreach ($flash as $key => $message) {
+                echo '<div class="'.$type.'" role="'.$type.'" >'.$message.'</div>';
+                // un fois affiché le message doit être supprimé
+                unset($_SESSION['flashBag'][$type][$key]);
+            }
+        }
+    }
 
-    // // Charge la page demandée
-    // $fileController = 'vue/'.$routing[$page]['controller'].'.php';
-    // if (file_exists($fileController)) {
-    //     require $fileController;
-    // } else {
-    //     echo 'File is missing';
-    // }
+    // Charge la page demandée
+    $fileController = 'vue/'.$routing[$page]['controller'].'.php';
+    if (file_exists($fileController)) {
+        require $fileController;
+    } else {
+        echo 'File is missing';
+    }
 ?>
-    
+<script type="text/javascript">
+</script>
 </body>
 </html>
