@@ -1,10 +1,4 @@
-body 
-{
-    margin: 0 25%;
-    padding:0;
-    width: 50%;
-}
-
+/*
 @font-face
 {
     font-family: Mission script;
@@ -21,9 +15,9 @@ body
 {
     font-family: Kenzo;
     src: url('fonts/Kenzo-Regular.otf') format('truetype');
-}
+}*/
 
-h1
+/*h1
 {
     font-weight: bold;
     font-family: 'Mission script';
@@ -46,7 +40,7 @@ footer
     margin-top: 5%;
     margin-bottom: 10%;
 }
-
+*/
 .motif-wave
 {
     max-width: 100%;
@@ -84,7 +78,7 @@ footer
     text-align: center;
     top: 35%;
 }
-
+/*
 .nav ul 
 {
     list-style: none;
@@ -106,9 +100,9 @@ footer
     font-size: 1.5vw;
     height: 5%;
     text-align: center;
-}
+}*/
  
-.nav a 
+/*.nav a 
 {
     text-decoration: none;
     color: black;
@@ -125,7 +119,7 @@ footer
 {
     color: #95b9c7;
     cursor: default;
-}
+}*/
 
 .mid
 {

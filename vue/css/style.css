@@ -14,13 +14,14 @@
 }
 
 body{
-	height: 2050px;
+	width: 100%;
+	height: auto;
 	background-color: #e5d9d1;
 }
 
 	.main{
 		width: 1200px;
-		height: 3008px;
+		height: auto;
 		/*background-color: yellow;*/
 		margin: auto;
 		overflow: hidden;
@@ -66,7 +67,7 @@ body{
 		}
 
 			.navUlDcas{
-				width: 428px;
+				width: 601px;
 				margin: auto;
 			}
 
@@ -121,7 +122,7 @@ body{
 				width: 340px;
 				height: 500px;
 				/*background-color: green;*/
-				margin-left: 50px;
+				margin-left: 95px;
 				float: left;
 			}
 
@@ -360,3 +361,136 @@ body{
 						padding-top: 10px;
 						cursor: pointer;
 					}
+
+/*Block pour les autres pages*/
+
+.actionBlock{
+	height: auto;
+	background-color: #fafafa;
+}
+
+/*Page stylist 1*/
+
+.centerStylist{
+	width: 950px;
+	text-align: center;
+	margin: auto;
+	line-height: 30px;
+}
+
+	.titleStylist1{
+		padding-top: 20px;
+		font-family: 'Kenzo';
+		color: #edaf86;
+		font-size: 50px;
+	}
+
+	.subTitleStylist1{
+		font-family: 'Kenzo';
+		color: #95b9c7;
+		font-size: 30px;
+	}
+
+.contentStylist{
+}
+
+/*Page login*/
+
+.contentLogin{
+	width: 950px;
+	margin: auto;
+}
+
+	#profilButton-login{
+		width: 100%;
+	    padding-top: 0px;
+	    margin-top: 40px;
+	    height: 50px;
+	    font-size: 25px;
+	    margin-bottom: 40px;
+	    background-color: #edaf86;
+	    border: 0px;
+	    cursor: pointer;
+	    font-family: 'OpenSans-Light';
+	    color: white;
+
+	}
+
+
+	.titleLogin{
+		/*padding-top: 20px;*/
+		font-family: 'Kenzo';
+		color: #edaf86;
+		font-size: 40px;
+	}
+
+		#presentation{
+			margin-left: 240px;
+			padding-bottom: 30px;
+		}
+
+		#inscription{
+			font-size: 35px;
+			margin-bottom: 30px;
+		}
+
+	.subTitleLogin{
+		font-family: 'Kenzo';
+		color: #95b9c7;
+		font-size: 30px;
+	}
+
+		#identify{
+			padding-bottom: 30px;
+			font-family: 'OpenSans-Light';
+		}
+
+	.areaLog{
+		font-family: 'OpenSans-Light';
+		font-weight: lighter;
+		line-height: 30px;
+	}
+
+	.formLog{
+		width: 468px;
+		margin: auto;
+		font-family: 'OpenSans-Light';
+	}
+
+.inputLogin{
+	width: 250px;
+	height: 30px;
+	border: 0px;
+}
+
+	#logMail{
+		margin-left: 142px;
+		margin-bottom: 20px;
+	}
+
+	#logPass{
+		margin-left: 93px;
+		margin-bottom: 20px;
+	}
+
+.submitDCAS{
+	width: 100px;
+	height: 30px;
+	font-family: 'OpenSans-Light';
+	background-color: #edaf86;
+	border: 0px;
+	color: white;
+	cursor: pointer;
+}
+
+	#logSubmit{
+		margin-bottom: 40px;
+	}
+
+	#log-inscription{
+		margin-top: 20px;
+		margin-left: 165px;
+		width: 200px;
+		height: 35px;
+		margin-bottom: 50px;
+	}

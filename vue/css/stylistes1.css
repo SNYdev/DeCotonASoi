@@ -1,11 +1,4 @@
-body 
-{
-    margin: 0 25%;
-    padding:0;
-    width: 50%;
-}
-
-@font-face
+/*@font-face
 {
     font-family: Mission script;
     src: url('fonts/Mission-Script.otf') format('truetype');
@@ -22,8 +15,8 @@ body
     font-family: Kenzo;
     src: url('fonts/Kenzo-Regular.otf') format('truetype');
 }
-
-h1
+*/
+/*h1
 {
     font-weight: bold;
     font-family: 'Mission script';
@@ -100,9 +93,9 @@ footer
     font-size: 1.25vw;
     margin-top: 5%;
     margin-bottom: 10%;
-}
+}*/
 
-.center
+/*.center
 {
     text-align: center;
 }
@@ -148,9 +141,9 @@ footer
     width: 100%; 
     text-align: center;
     top: 35%;
-}
+}*/
 
-.nav ul 
+/*.nav ul 
 {
     list-style: none;
     background-color: white;
@@ -171,9 +164,9 @@ footer
     font-size: 1.5vw;
     height: 5%;
     text-align: center;
-}
+}*/
  
-.nav a 
+/*.nav a 
 {
     text-decoration: none;
     color: black;
@@ -190,9 +183,9 @@ footer
 {
     color: #95b9c7;
     cursor: default;
-}
+}*/
 
-.face
+/*.face
 {
     max-width: 15%;
     height: auto; 
@@ -334,9 +327,9 @@ footer
     font-family: 'Open sans';
     font-size: 1.25vw;
     text-align: left; 
-}
+}*/
 
-a.none
+/*a.none
 {
     text-decoration: none;
     color: black;
@@ -351,9 +344,9 @@ a.none.active
 {
     color: #95b9c7;
     cursor: default;
-}
+}*/
 
-.top
+/*.top
 {
     max-width: 100%;
     height: auto; 
@@ -384,4 +377,4 @@ a.none.active
     height: auto; 
     width: 5%;
     margin-right: 1%;
-}
+}*/
