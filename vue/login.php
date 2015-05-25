@@ -1,14 +1,14 @@
 <<<<<<< HEAD
     <br><br><br><br>
-    
-     <form>
+
+    <form action="" method="post">
         <fieldset>
             <legend>VOUS POSSEDEZ DEJA UN COMPTE</legend><br>
             Identifiez-vous<br>
             E-mail<br>
-            <input type="text" name="mail"><br>
+            <input type="text" name="email" /><br>
             Mot de passe<br>
-            <input type="text" name="pass"><br>
+            <input type="password" name="password" /><br>
             Mot de passe oublié ?<br>
             <input type="submit" value="Submit">
          </fieldset>
@@ -32,12 +32,7 @@
     <a href="#"><img class="B-create-account" alt="B-create-account" src="#"></a>
     
     <br><br><br><br>
-=======
-<form action="" method="post">
-    <p>Email : <input type="text" name="email" /></p>
-    <p>Mot de passe : <input type="password" name="password" /></p>
-   	<p><input type="submit" /></p>
-</form>
+
 
 <?php
 	if(!empty($_POST['email'])) {

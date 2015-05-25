@@ -33,7 +33,6 @@
             'controller' => 'login',
             'secure' => false,
             ],
-
         'message' => [
             'controller' => 'message',
             'secure' => true,
@@ -86,8 +85,8 @@
     <script src="js/jquery-2.1.3.min.js"></script>
 <?php
     // Charge le CSS/JS de la page demandée
-    $cssController = './vue/css/' . $routing[$page]['controller'] . '.css';
-    $jsController = './vue/script/' . $routing[$page]['controller'] . '.js';
+    $cssController = 'vue/css/' . $routing[$page]['controller'] . '.css';
+    $jsController = 'vue/script/' . $routing[$page]['controller'] . '.js';
 
     if (file_exists($cssController)) {
         echo '<link href="' . $cssController . '" type="text/css" rel="stylesheet">';
@@ -102,6 +101,7 @@
     }
 ?>
 </head>
+<body>
 <div class="main">
     <div class="header">
         <img id="logosHeader" src="vue/img/LOGO-Projet-Transversale.svg" width="100px">
@@ -115,18 +115,20 @@
         <div class="nav">
             <ul class="navUlDcas">
                 <li class="navLiDcas"><a class="linkNav" href="?page=home">Accueil</a></li>
-                <li class="navLiDcas"><a class="linkNav" href="?page=inscription">Stylistes</a></li>
+                <li class="navLiDcas"><a class="linkNav" href="?page=stylistes1">Nos stylistes</a></li>
                 <?php
                     if (isset($_SESSION['user'])) {
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=logout">Logout</a></li>';
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=profil">Profil</a></li>';
                     } else {
+                        echo '<li class="navLiDcas"><a class="linkNav" href="?page=inscription">Inscription</a></li>';
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=login">Connexion</a></li>';
                     }
                 ?>
                 <li class="navLiDcas"><a class="linkNav" href="?page=home">Contact</a></li>
             </ul>
-        </div> 
+        </div>
+
 <?php
 
 
