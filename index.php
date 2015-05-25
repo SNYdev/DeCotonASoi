@@ -114,10 +114,10 @@
 ?>
 </head>
 <body>
-<div class="main">
-    <div class="header">
-        <img id="logosHeader" src="vue/img/LOGO-Projet-Transversale.svg" width="100px">
-    </div>
+    <div class="main">
+        <div class="header">
+            <img id="logosHeader" src="vue/img/LOGO-Projet-Transversale.svg" width="100px">
+        </div>
         <div class="banner">
             <div class="txtBanner">
                 <h1 class="bannerTitle">De Coton à Soie</h1>
@@ -128,44 +128,94 @@
             <ul class="navUlDcas">
                 <li class="navLiDcas"><a class="linkNav" href="?page=home">Accueil</a></li>
                 <li class="navLiDcas"><a class="linkNav" href="?page=stylistes1">Nos stylistes</a></li>
-                <?php
-                    if (isset($_SESSION['user'])) {
+                    <?php
+                        if (isset($_SESSION['user'])) {
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=logout">Logout</a></li>';
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=profil">Profil</a></li>';
                     } else {
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=inscription">Inscription</a></li>';
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=login">Connexion</a></li>';
                     }
-                    if(isset($_SESSION['user']) && ($_SESSION['user']['name'] === "admin")) {
-                        echo '<li class="navLiDcas"><a class="linkNav" href="?page=backoffice">Backoffice</a></li>';
-                    }
                 ?>
-                <li class="navLiDcas"><a class="linkNav" href="?page=home">Contact</a></li>
-            </ul>
-        </div>
+            <li class="navLiDcas"><a class="linkNav" href="?page=home">Contact</a></li>
+        </ul>
+    </div>
+    <div class="actionBlock">
+    <?php
 
-<?php
 
-
-    // Affiche les flashBag : des messages informatif du genre "votre message a bien été envoyé"
-    if (isset($_SESSION['flashBag'])) {
-        foreach ($_SESSION['flashBag'] as $type => $flash) {
-            foreach ($flash as $key => $message) {
-                echo '<div class="'.$type.'" role="'.$type.'" >'.$message.'</div>';
-                // un fois affiché le message doit être supprimé
-                unset($_SESSION['flashBag'][$type][$key]);
+        // Affiche les flashBag : des messages informatif du genre "votre message a bien été envoyé"
+        if (isset($_SESSION['flashBag'])) {
+            foreach ($_SESSION['flashBag'] as $type => $flash) {
+                foreach ($flash as $key => $message) {
+                    echo '<div class="'.$type.'" role="'.$type.'" >'.$message.'</div>';
+                    // un fois affiché le message doit être supprimé
+                    unset($_SESSION['flashBag'][$type][$key]);
+                }
             }
         }
-    }
 
-    // Charge la page demandée
-    $fileController = 'vue/'.$routing[$page]['controller'].'.php';
-    if (file_exists($fileController)) {
-        require $fileController;
-    } else {
-        echo 'File is missing';
-    }
-?>
+        // Charge la page demandée
+        $fileController = 'vue/'.$routing[$page]['controller'].'.php';
+        if (file_exists($fileController)) {
+            require $fileController;
+        } else {
+            echo 'File is missing';
+        }
+    ?>
+    </div>
+        <div class="footer">
+                <div class="mainFooter">
+                    <div class="iconeDCAS">
+                        <div class="iconeIMG">
+                            <img src="vue/img/logo-payement.png" width='70px'>
+                            <p class="iconeTxt" id="Psecurity">Paiement securisé</p>
+                        </div>
+                        <div class="iconeIMG">
+                            <img src="vue/img/logo-livraison.png" width='70px'>
+                            <p class="iconeTxt" id="Pexpedition">Paiement à l'expedition</p>
+                        </div>
+                        <div class="iconeIMG">
+                            <img src="vue/img/logo-expedition.png" width='90px'>
+                            <p class="iconeTxt" id="Poffer">Livraison offerte</p>
+                        </div>
+                        <div class="iconeIMG">
+                            <img src="vue/img/logo-changement.png" width='50px'>
+                            <p class="iconeTxt" id="Pdays">30 jours pour changer d'avis</p>
+                        </div>
+                    </div>
+                    <div id="barre">
+                    </div>
+                    <div class="moreInformation">
+                        <div class="contactInformation">
+                            <h1 class="h1Information">Ma commande<br></h1>
+                            <ul class="liInformation">
+                                <li><a class="linkFooter" href="">Suivi de commande</a></li>
+                                <li><a class="linkFooter" href="">Frais d'envoie</a></li>
+                                <li><a class="linkFooter" href="">Délai de livraison</a></li>
+                                <li><a class="linkFooter" href="">Echange et remboursement</a></li>
+                                <li><a class="linkFooter" href="">Moyen de paiement</a></li>
+                            </ul>
+                        </div>
+                        <div class="contact">
+                            <h1 class="h1Information">Nous contacter</h1>
+                            <ul class="liInformation">
+                                <li>06.28.42.93.59</li>
+                                <li>maeva.gabriel96@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="socialNetwork">
+                            <h1 class="h1Information" id="followBlock">Suivez-Nous</h1>
+                            <div class="contactIcone">
+                                <img src="vue/img/facebook-icon-flat.png" width="40px">
+                                <img src="vue/img/logo-Twitter.png" width="40px">
+                                <img src="vue/img/logo-insta.jpg" width="40px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
     <script type="text/javascript">
     </script>
 </body>
