@@ -1,37 +1,30 @@
-<<<<<<< HEAD
-    <br><br><br><br>
-
-    <form action="" method="post">
-        <fieldset>
-            <legend>VOUS POSSEDEZ DEJA UN COMPTE</legend><br>
-            Identifiez-vous<br>
-            E-mail<br>
-            <input type="text" name="email" /><br>
-            Mot de passe<br>
-            <input type="password" name="password" /><br>
-            Mot de passe oublié ?<br>
-            <input type="submit" value="Submit">
-         </fieldset>
-    </form>
+<div class="contentLogin">
+    <input type="button" id="profilButton-login" value="Mon compte - De coton à soie">
+    <h1 class="titleLogin" id="presentation">VOUS POSSEDEZ DEJA UN COMPTE ?</h1>
+    <div class="formLog">
+        <h2 class="subTitleLogin" id="identify">Identifiez-vous</h2>
+        <form action="" method="post">
+            E-mail <input type="text" class="inputLogin" id="logMail" name="email"/><br>
+            Mot de passe<input type="password" class="inputLogin" id="logPass" name="password"/>
+            <!-- Mot de passe oublié ? -->
+            <br> <input type="submit" class="submitDCAS" id="logSubmit" value="Submit">
+        </form>
     
-    VOUS SOUHAITEZ CREER UN COMPTE ?<br>
-    <br>
-    <p>En créant un compte sur notre boutique, vous aurez accès à l’ensemble de nos services :<br>
-    <br>
-    - Consultation et suivi de vos commandes.<br>
-    <br>
-    - Rencontre et échange avec des stylistes.<br>
-    <br>
+    <h1 class="titleLogin" id="inscription">VOUS SOUHAITEZ CREER UN COMPTE ?</h1>
+    
+    <p class="areaLog">En créant un compte sur notre boutique, vous aurez accès à l’ensemble de nos services :<br>
+    - Consultation et suivi de vos commandes. <br>
+    - Rencontre et échange avec des stylistes. <br>
     - Création de votre lingerie.<br>
-    <br>
     - Invitations aux ventes privées.<br>
-    <br>
-    - Et bien d’autres avantages encore…
+    - Et bien d’autres avantages encore…<br>
     </p>
     
-    <a href="#"><img class="B-create-account" alt="B-create-account" src="#"></a>
+    <a href="?page=inscription"><input type="button" class="submitDCAS" id="log-inscription" value="CREER UN COMPTE"></a>
+    </div>
+</div>
     
-    <br><br><br><br>
+    
 
 
 <?php
@@ -54,4 +47,3 @@
 	}
 				
 ?>
->>>>>>> 7c40a6838fa3f51cf69b32d7f6f139149ae3e6dd
