@@ -33,6 +33,19 @@
             'controller' => 'login',
             'secure' => false,
             ],
+        'stylistes1' => [
+            'controller' => 'stylistes1',
+            'secure' => false,
+            ],
+        'stylistes2' => [
+            'controller' => 'stylistes2',
+            'secure' => false,
+            ],
+        'backoffice' => [
+            'controller' => 'backoffice',
+            'secure' => true,
+            'addStylist' => 'addStylist'
+            ],
         'message' => [
             'controller' => 'message',
             'secure' => true,
@@ -87,7 +100,6 @@
     // Charge le CSS/JS de la page demandée
     $cssController = 'vue/css/' . $routing[$page]['controller'] . '.css';
     $jsController = 'vue/script/' . $routing[$page]['controller'] . '.js';
-
     if (file_exists($cssController)) {
         echo '<link href="' . $cssController . '" type="text/css" rel="stylesheet">';
     } 
@@ -123,6 +135,9 @@
                     } else {
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=inscription">Inscription</a></li>';
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=login">Connexion</a></li>';
+                    }
+                    if(isset($_SESSION['user']) && ($_SESSION['user']['name'] === "admin")) {
+                        echo '<li class="navLiDcas"><a class="linkNav" href="?page=backoffice">Backoffice</a></li>';
                     }
                 ?>
                 <li class="navLiDcas"><a class="linkNav" href="?page=home">Contact</a></li>
