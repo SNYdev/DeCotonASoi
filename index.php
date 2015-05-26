@@ -62,6 +62,10 @@
             'controller' => 'profil',
             'secure' => true,
             ],
+        'profilUpdate' => [
+            'controller' => 'profilUpdate',
+            'secure' => true,
+        ],
     ];
 
     // verifions la pertinance de la page en GET

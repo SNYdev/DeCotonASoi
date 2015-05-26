@@ -23,6 +23,36 @@
     <p><input type="submit" /></p>
 </form>
 
+<?php
+if(!empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['login']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
+    $count = $user->countUserByName($_POST['login']);
+
+    if(empty($_POST['tel'])) {
+        $_POST['tel'] = '';
+    }
+
+    if($count['nb_user']) {
+        $user->addMessageFlash('info','Login existe déjà.');
+    }
+    else {
+        $user->updateUser($_SESSION['id'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['newsletter']);
+        $info = $user->getUserByName($_POST['firstname']);
+
+        $_SESSION['user'] = ['name' => $info['login']];
+
+        $user->addMessageFlash('success','Modification réussie !');
+
+        header('Location: http://localhost/DeCotonASoi/');
+
+        exit;
+    }
+}
+else {
+    echo 'Le formulaire a été mal saisi.';
+}
+
+?>
+
 <script>
     $(function() {
         $("#login").change(function () {
@@ -82,29 +112,3 @@
     });
 
 </script>
-
-<?php
-if(!empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['login']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
-    $count = $user->countUserByName($_POST['login']);
-
-    if($count['nb_user']) {
-        $user->addMessageFlash('info','Login existe déjà.');
-    }
-    else {
-        $user->updateUser($_SESSION['id'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['newsletter']);
-        $info = $user->getUserByName($_POST['firstname']);
-
-        $_SESSION['user'] = ['name' => $info['login']];
-
-        $user->addMessageFlash('success','Modification réussie !');
-
-        header('Location: http://localhost/DeCotonASoi/');
-
-        exit;
-    }
-}
-else {
-    $user->addMessageFlash('info','Le formulaire a été mal saisi.');
-}
-
-?>

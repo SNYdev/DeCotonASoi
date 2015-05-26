@@ -31,9 +31,9 @@ class User {
         return $response;
     }
 
-    public function addUser($gender, $firstname, $lastname, $login, $password, $address, $city, $zcode, $email, $newsletter) {
-        $requete = $this->connection->prepare('INSERT INTO users(sexe, prenom, nom, login, motDePasse, adresse, ville, codePostal, email) VALUES (?,?,?,?,?,?,?,?,?,?)');
-        $requete->execute(array($gender, $firstname, $lastname, $login, sha1($password), $address, $city, $zcode, $email, $newsletter));
+    public function addUser($gender, $firstname, $lastname, $login, $password, $address, $city, $zcode, $tel, $email, $newsletter) {
+        $requete = $this->connection->prepare('INSERT INTO users(sexe, prenom, nom, login, motDePasse, adresse, ville, codePostal, telephone, email, newsletter) VALUES (?,?,?,?,?,?,?,?,?,?,?)');
+        $requete->execute(array($gender, $firstname, $lastname, $login, sha1($password), $address, $city, $zcode, $tel, $email, $newsletter));
     }
 
     public function updateUser($id, $login, $password, $address, $city, $zcode, $email, $newsletter) {

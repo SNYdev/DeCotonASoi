@@ -13,6 +13,16 @@
     <p><input type="submit" /></p>
 </form>
 
+<?php
+if(!empty($_POST['firstname'])  && !empty($_POST['lastname']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['firstname']) >= 2) && (strlen($_POST['lastname']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
+    $stylist->addStylist($_POST['gender'], $_POST['firstname'], $_POST['lastname'], $_POST['password'], $_POST['address'], $_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['description'], $_POST['tel']);
+    echo "Styliste ajouté !";
+}
+else {
+    echo "Formulaire mal saisi.";
+}
+?>
+
 <script>
     $(function() {
         $("#password_check").change(function () {
@@ -25,13 +35,3 @@
         });
     });
 </script>
-
-<?php
-if(!empty($_POST['firstname'])  && !empty($_POST['lastname']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['firstname']) >= 2) && (strlen($_POST['lastname']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
-        $stylist->addStylist($_POST['gender'], $_POST['firstname'], $_POST['lastname'], $_POST['password'], $_POST['address'], $_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['description'], $_POST['tel']);
-    echo "Styliste ajouté !";
-}
-else {
-        echo "Formulaire mal saisi.";
-}
-
