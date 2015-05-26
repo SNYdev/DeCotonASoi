@@ -62,9 +62,9 @@ if(!empty($_POST['firstname'])  && !empty($_POST['lastname']) && !empty($_POST['
     }
     else {
         $user->addUser($_POST['gender'], $_POST['firstname'], $_POST['lastname'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['tel'], $_POST['email'], $_POST['newsletter']);
-        $info = $user->getUserByName($_POST['email']);
+        $info = $user->getUserByEmailAndPassword($_POST['email'], $_POST['password']);
 
-        $_SESSION['user'] = ['id' => $info['id'], 'firstname' => $info['prenom'], 'lastname' => $info['nom'], 'gender' => $info['sexe'], 'name' => $info['login']];
+        $_SESSION['user'] = ['id' => $info['id'], 'firstname' => $info['prenom'], 'lastname' => $info['nom'], 'gender' => $info['sexe'], 'login' => $info['login'], 'email' => $info['email'], 'newsletter' => $info['Newsletter'], 'address' => $info['adresse'], 'city' => $info['ville'], 'zcode' => $info['codePostal'], 'tel' => $info['telephone'], 'password' => $info['motDePasse']];
 
         $user->addMessageFlash('success','Inscription réussie !');
 

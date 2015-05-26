@@ -37,14 +37,14 @@ class User {
     }
 
     public function updateUser($id, $login, $password, $address, $city, $zcode, $email, $newsletter) {
-        $requete = $this->connection->prepare('UPDATE users SET login=?, motDePasse=?, adresse=?, ville=?, codePostal=?, email=?, newsletter=? WHERE id=?');
+        $requete = $this->connection->prepare('UPDATE users SET login=?, motDePasse=?, adresse=?, ville=?, codePostal=?, email=?, Newsletter=? WHERE id=?');
         $requete->execute(array($login, sha1($password), $address, $city, $zcode, $email, $newsletter, $id));
     }
 
-    function getUserByName($name) {
+    function getUserByLogin($login) {
         $request = $this->connection->prepare('SELECT * FROM users WHERE login=?');
-        $request->execute(array($name));
-        $user = $request->fetch();
+        $request->execute(array($login));
+        $user = $request->fetchAll();
 
         return $user;
     }

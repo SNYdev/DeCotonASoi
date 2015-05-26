@@ -30,13 +30,12 @@
 <?php
 	if(!empty($_POST['email'])) {
 		if(!empty($_POST['password'])) {
-			$response = $user->getUserByEmailAndPassword($_POST['email'], $_POST['password']);
-			if ($response) {
-				$_SESSION['user'] = ['id' => $response['id'], 'firstname' => $response['prenom'], 'lastname' => $response['lastname'], 'gender' => $response['sexe'], 'name' => $response['login']];
+			$info = $user->getUserByEmailAndPassword($_POST['email'], $_POST['password']);
+			if ($info) {
+                $_SESSION['user'] = ['id' => $info['id'], 'firstname' => $info['prenom'], 'lastname' => $info['nom'], 'gender' => $info['sexe'], 'login' => $info['login'], 'email' => $info['email'], 'newsletter' => $info['Newsletter'], 'address' => $info['adresse'], 'city' => $info['ville'], 'zcode' => $info['codePostal'], 'tel' => $info['telephone'], 'password' => $info['motDePasse']];
 
-				header('Location: http://localhost/DeCotonASoi/');
+                header('Location: http://localhost/DeCotonASoi/');
 				exit;
-
 	        }
 
 	        else {

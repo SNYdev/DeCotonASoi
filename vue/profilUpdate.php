@@ -35,10 +35,10 @@ if(!empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']
         $user->addMessageFlash('info','Login existe déjà.');
     }
     else {
-        $user->updateUser($_SESSION['id'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['newsletter']);
-        $info = $user->getUserByName($_POST['firstname']);
+        $user->updateUser($_SESSION['user']['id'], $_POST['login'], $_POST['password'], $_POST['address'],$_POST['city'], $_POST['zcode'], $_POST['email'], $_POST['newsletter']);
+        $info = $user->getUserByEmailAndPassword($_SESSION['user']['email'], $_SESSION['user']['password']);
 
-        $_SESSION['user'] = ['name' => $info['login']];
+        $_SESSION['user'] = ['id' => $info['id'], 'firstname' => $info['prenom'], 'lastname' => $info['nom'], 'gender' => $info['sexe'], 'login' => $info['login'], 'email' => $info['email'], 'newsletter' => $info['Newsletter'], 'address' => $info['adresse'], 'city' => $info['ville'], 'zcode' => $info['codePostal'], 'tel' => $info['telephone'], 'password' => $info['motDePasse']];
 
         $user->addMessageFlash('success','Modification réussie !');
 
