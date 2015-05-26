@@ -494,3 +494,93 @@ body{
 		height: 35px;
 		margin-bottom: 50px;
 	}
+
+/*Page inscription*/
+
+
+
+.formInscription{
+	width: 416px;
+	margin:auto;
+	font-family: 'OpenSans-Light';
+	padding-bottom: 30px;
+}
+
+	.inputSubscription{
+		width: 250px;
+		height: 30px;
+		border: 0px;
+		background-color: white;
+		margin-bottom: 8px;
+	}
+
+	#firstname{
+		margin-left: 103px;
+	}
+
+	#lastname{
+		margin-left: 125px;
+	}
+
+	#login{
+		margin-left: 106px;
+	}
+
+	#address{
+		margin-left: 55px;
+	}
+
+	#city{
+		margin-left: 131px;
+	}
+
+	#zcode{
+		margin-left: 76px;
+	}
+
+	#email{
+		margin-left: 56px;
+	}
+
+	#password{
+		margin-left: 64px;
+	}
+
+	#password_check{
+
+	}
+
+	#tel{
+		margin-left: 85px;
+	}
+
+	.checkSubscription{
+		margin-bottom: 20px;	
+	}
+
+	#submitSubscription{
+		width: 100px;
+		height: 30px;
+		font-family: 'OpenSans-Light';
+		background-color: #edaf86;
+		border: 0px;
+		color: white;
+		cursor: pointer;
+	}
+
+	#p-Subscription{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+.titleSubscription{
+	font-family: 'Kenzo';
+	color: #edaf86;
+	font-size: 40px;
+}
+
+	#subscription-H1{
+		margin-left: 377px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
