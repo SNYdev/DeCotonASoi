@@ -74,7 +74,7 @@ if(!empty($_POST['firstname'])  && !empty($_POST['lastname']) && !empty($_POST['
     }
 }
 else {
-    echo 'Le formulaire a été mal saisi.';
+    User::addMessageFlash('info','Formulaire mal saisi.');
 }
 
 ?>

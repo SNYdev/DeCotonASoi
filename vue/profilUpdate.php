@@ -40,7 +40,7 @@ if(!empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']
 
         $_SESSION['user'] = ['id' => $info['id'], 'firstname' => $info['prenom'], 'lastname' => $info['nom'], 'gender' => $info['sexe'], 'login' => $info['login'], 'email' => $info['email'], 'newsletter' => $info['Newsletter'], 'address' => $info['adresse'], 'city' => $info['ville'], 'zcode' => $info['codePostal'], 'tel' => $info['telephone'], 'password' => $info['motDePasse']];
 
-        $user->addMessageFlash('success','Modification réussie !');
+        User::addMessageFlash('success','Modification réussie !');
 
         header('Location: http://localhost/DeCotonASoi/');
 
@@ -48,7 +48,7 @@ if(!empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']
     }
 }
 else {
-    echo 'Le formulaire a été mal saisi.';
+    User::addMessageFlash('info','Formulaire mal saisi.');
 }
 
 ?>
