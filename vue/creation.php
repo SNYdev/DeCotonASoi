@@ -1,43 +1,47 @@
 <form action="" method="post">
     Modèle de soutiens gorge
-    <input type="radio" name="bra" value="profond" checked>Grand maintien, bonnets profonds et minimiseur
-    <input type="radio" name="bra" value="balconnet">Soutien gorge balconnet
-    <input type="radio" name="bra" value="armature">Armature ou emboitant
-    <input type="radio" name="bra" value="corbeille">Corbeille ou demi coupe corbeille
-    <input type="radio" name="bra" value="pushup">Soutien Push up
-    <input type="radio" name="bra" value="plunge">Soutiens gorge Plunge
-    <input type="radio" name="bra" value="coque">Coques et paddés
-    <input type="radio" name="bra" value="bandeau">Bandeau ou sans bretelles
-    <input type="radio" name="bra" value="triangle">Triangle
-    <input type="radio" name="bra" value="invisible">Invisibles et moulés
-    <input type="radio" name="bra" value="nu">Soutien gorge dos nu
-    <input type="radio" name="bra" value="brassiere">Brassière et soutien gorge de sport
+    <input type="radio" name="bra" value="Profond" checked>Grand maintien, bonnets profonds et minimiseur
+    <input type="radio" name="bra" value="Balconnet">Soutien gorge balconnet
+    <input type="radio" name="bra" value="Armature">Armature ou emboitant
+    <input type="radio" name="bra" value="Corbeille">Corbeille ou demi coupe corbeille
+    <input type="radio" name="bra" value="Pushup">Soutien Push up
+    <input type="radio" name="bra" value="Plunge">Soutiens gorge Plunge
+    <input type="radio" name="bra" value="Coque">Coques et paddés
+    <input type="radio" name="bra" value="Bandeau">Bandeau ou sans bretelles
+    <input type="radio" name="bra" value="Triangle">Triangle
+    <input type="radio" name="bra" value="Invisible">Invisibles et moulés
+    <input type="radio" name="bra" value="Nu">Soutien gorge dos nu
+    <input type="radio" name="bra" value="Brassiere">Brassière et soutien gorge de sport
 
     Tissus
-    <input type="radio" name="material" value="coton" checked>Coton
-    <input type="radio" name="material" value="dentelle">Dentelle
-    <input type="radio" name="material" value="soie">Soie
-    <input type="radio" name="material" value="satin">Satin
-    <input type="radio" name="material" value="tulle">Tulle brodé
+    <input type="radio" name="material" value="Coton" checked>Coton
+    <input type="radio" name="material" value="Dentelle">Dentelle
+    <input type="radio" name="material" value="Soie">Soie
+    <input type="radio" name="material" value="Satin">Satin
+    <input type="radio" name="material" value="Tulle">Tulle brodé
 
     Modèle de culotte
-    <input type="radio" name="underwear" value="miniString"checked>Mini-string
-    <input type="radio" name="underwear" value="string">String
-    <input type="radio" name="underwear" value="tanga">Tanga
-    <input type="radio" name="underwear" value="hotTanga">Hot tanga
-    <input type="radio" name="underwear" value="slipFemme">Slip femme
-    <input type="radio" name="underwear" value="slipItalien">Slip italien
-    <input type="radio" name="underwear" value="culotte">Culotte
-    <input type="radio" name="underwear" value="shorty">Shorty
-    <input type="radio" name="underwear" value="boxerFemme">Boxer femme
-    <input type="radio" name="underwear" value="invisible">Invisible
-    <input type="radio" name="underwear" value="stanga">Stanga
+    <input type="radio" name="underwear" value="Mini-string"checked>Mini-string
+    <input type="radio" name="underwear" value="String">String
+    <input type="radio" name="underwear" value="Tanga">Tanga
+    <input type="radio" name="underwear" value="Hot-tanga">Hot tanga
+    <input type="radio" name="underwear" value="Slip-femme">Slip femme
+    <input type="radio" name="underwear" value="Slip-italien">Slip italien
+    <input type="radio" name="underwear" value="Culotte">Culotte
+    <input type="radio" name="underwear" value="Shorty">Shorty
+    <input type="radio" name="underwear" value="Boxer-femme">Boxer femme
+    <input type="radio" name="underwear" value="Invisible">Invisible
+    <input type="radio" name="underwear" value="Stanga">Stanga
 
     <input type="submit" value="Créer">
 </form>
 
 <?php
+if(isset($_POST['bra'], $_POST['material'], $_POST['underwear'])) {
     $_SESSION['creation'] = ['bra' => $_POST['bra'], 'material' => $_POST['material'], 'underwear' => $_POST['underwear']];
-    header('location : ?page=creationResum');
-    exit
+
+    header('Location: ?page=creationResum');
+
+    exit;
+}
 ?>
