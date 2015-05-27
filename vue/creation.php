@@ -1,39 +1,58 @@
-<form action="" method="post">
-    Modèle de soutiens gorge
-    <input type="radio" name="bra" value="Profond" checked>Grand maintien, bonnets profonds et minimiseur
-    <input type="radio" name="bra" value="Balconnet">Soutien gorge balconnet
-    <input type="radio" name="bra" value="Armature">Armature ou emboitant
-    <input type="radio" name="bra" value="Corbeille">Corbeille ou demi coupe corbeille
-    <input type="radio" name="bra" value="Pushup">Soutien Push up
-    <input type="radio" name="bra" value="Plunge">Soutiens gorge Plunge
-    <input type="radio" name="bra" value="Coque">Coques et paddés
-    <input type="radio" name="bra" value="Bandeau">Bandeau ou sans bretelles
-    <input type="radio" name="bra" value="Triangle">Triangle
-    <input type="radio" name="bra" value="Invisible">Invisibles et moulés
-    <input type="radio" name="bra" value="Nu">Soutien gorge dos nu
-    <input type="radio" name="bra" value="Brassiere">Brassière et soutien gorge de sport
-
-    Tissus
-    <input type="radio" name="material" value="Coton" checked>Coton
-    <input type="radio" name="material" value="Dentelle">Dentelle
-    <input type="radio" name="material" value="Soie">Soie
-    <input type="radio" name="material" value="Satin">Satin
-    <input type="radio" name="material" value="Tulle">Tulle brodé
-
-    Modèle de culotte
-    <input type="radio" name="underwear" value="Mini-string"checked>Mini-string
-    <input type="radio" name="underwear" value="String">String
-    <input type="radio" name="underwear" value="Tanga">Tanga
-    <input type="radio" name="underwear" value="Hot-tanga">Hot tanga
-    <input type="radio" name="underwear" value="Slip-femme">Slip femme
-    <input type="radio" name="underwear" value="Slip-italien">Slip italien
-    <input type="radio" name="underwear" value="Culotte">Culotte
-    <input type="radio" name="underwear" value="Shorty">Shorty
-    <input type="radio" name="underwear" value="Boxer-femme">Boxer femme
-    <input type="radio" name="underwear" value="Invisible">Invisible
-    <input type="radio" name="underwear" value="Stanga">Stanga
-
-    <input type="submit" value="Créer">
+<form action="" class="formCreation" method="post">
+    <div class="BLOCK">
+        <h2 class="titleFormCreation">Modèle de soutiens gorge</h2>
+        <div class="blockCreation">
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="profond" checked>Grand maintien, bonnets profonds et minimiseur<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="balconnet">Soutien gorge balconnet<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="armature">Armature ou emboitant<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="corbeille">Corbeille ou demi coupe corbeille<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="pushup">Soutien Push up<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="plunge">Soutiens gorge Plunge<br>
+        </div>
+        <div class="blockCreation">
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="coque">Coques et paddés<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="bandeau">Bandeau ou sans bretelles<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="triangle">Triangle<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="invisible">Invisibles et moulés<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="nu">Soutien gorge dos nu<br>
+            <input type="radio" name="bra" class="modele-soutiensGorge" value="brassiere">Brassière et soutien gorge de sport<br>
+        </div>
+    </div>
+    <div class="BLOCK">
+        <div class="tissusCreation">
+            <h2 class="titleFormCreation">Tissus</h2>
+            <input type="radio" name="material" class="modele-soutiensGorge" value="coton" checked>Coton<br>
+            <input type="radio" name="material" class="modele-soutiensGorge" value="dentelle">Dentelle<br>
+            <input type="radio" name="material" class="modele-soutiensGorge" value="soie">Soie<br>
+            <input type="radio" name="material" class="modele-soutiensGorge" value="satin">Satin<br>
+            <input type="radio" name="material" class="modele-soutiensGorge" value="tulle">Tulle brodé
+        </div>
+        <div class="img3D">
+            <img src="vue/img/model3D.jpg" width="160px">
+        </div>
+        <div class="patternsSelect">
+            <img src="vue/img/patternUser.jpg" width="160px">
+        </div>
+    </div>
+    <div class="BLOCK">
+        <h2 class="titleFormCreation">Modèle de Culotte</h2><br>
+        <div id="modelLeft">
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="miniString"checked>Mini-string<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="string">String<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="tanga">Tanga<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="hotTanga">Hot tanga<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="slipFemme">Slip femme<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="slipItalien">Slip italien<br>
+        </div>
+        <div id="modelRight">
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="culotte">Culotte<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="shorty">Shorty<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="boxerFemme">Boxer femme<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="invisible">Invisible<br>
+            <input type="radio" name="underwear" class="modele-soutiensGorge" value="stanga">Stanga<br>
+        </div>
+    </div>
+    <input type="submit" class="submitDCAS" value="Créer">
 </form>
 
 <?php

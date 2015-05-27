@@ -710,3 +710,69 @@ body{
 				font-size: 30px;
 				padding-bottom: 20px;
 			}
+
+			/*Page Creation*/
+
+
+.BLOCK{
+	height: 255px;
+	margin-bottom: 50px;
+}
+
+.formCreation{
+	width: 950px;
+	height: 960px;
+	font-family: 'OpenSans-Light';
+	padding-top: 30px;
+	margin-left: 185px;
+}
+
+	.titleFormCreation{
+		font-family: 'OpenSans-Light';
+		font-size: 25px;
+		padding-bottom: 20px;
+		color: #edaf86;
+	}
+
+	.blockCreation{
+		width: 50%;
+		float: left;
+	}
+
+		.modele-soutiensGorge{
+			padding-top: 15px;
+			margin-bottom: 20px;
+		}
+
+	.tissusCreation{
+	width: 33.3%;
+	height: 259px;
+	float: left;	
+	}
+
+	.img3D{
+		width: 33.3%;
+		/*background-image: url(../img/model3D.jpg);*/
+		float: left;
+		/*margin-bottom: 180px;*/
+	}
+	.patternsSelect{
+		width: 33.3%;
+		/*background-image: url(../img/patternUser.jpg);*/
+		float: left;
+	}
+
+	.BlockModele{
+		width: 695px;
+
+	}
+
+		#modelLeft{
+			width: 50%;
+			float: left;
+		}
+
+		#modelRight{
+			width: 50%;
+			float: left;
+		}
