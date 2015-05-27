@@ -49,7 +49,7 @@
         }
     }
     else {
-        User::addMessageFlash('info','Formulaire n\'a pas ou a été mal saisi.');
+        $user->addMessageFlash('info','Formulaire n\'a pas ou a été mal saisi.');
     }
 ?>
 
