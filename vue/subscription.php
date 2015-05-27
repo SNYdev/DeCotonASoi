@@ -2,17 +2,17 @@
 <form action="" class="formInscription" method="post">
     <input type="radio" class="checkSubscription" name="gender" value="1" checked/>Mme
     <input type="radio" class="checkSubscription" name="gender" value="2"/>Mr<br>
-    Prenom <input type="text" name="firstname" class="inputSubscription" id="firstname"/><p id="error1"></p>
-    Nom <input type="text" name="lastname" class="inputSubscription" id="lastname" /><p id="error2"></p>
-    Pseudo <input type="text" name="login" class="inputSubscription" id="login" /><p id="error11"></p>
-    Adresse postal <input type="text" name="address" class="inputSubscription" id="address" /><p id="error4"></p>
-    Ville <input type="text" name="city" class="inputSubscription" id="city" /><p id="error5"></p>
-    Code postal <input type="text" name="zcode" class="inputSubscription" id="zcode" /><p id="error6"></p>
-    Adresse E-mail <input type="text" name="email" class="inputSubscription" id="email" /><p id="error10"></p>
-    Mot de passe <input type="password" name="password" class="inputSubscription" id="password" /><p id="error8"></p>
-    Verif. du mot de passe <input type="password" name="password_check" class="inputSubscription" id="password_check" /><p id="error9"></p>
-    Téléphone <input type="tel" name="tel" class="inputSubscription" id="tel" /><p id="error7"></p>
-    Newsletter<input type="checkbox" class="checkboxSubscription" id="checkboxNewsletter" name="newsletter" value="1"/>
+    Prenom <input type="text" name="firstname" class="inputSubscription" class="firstname"/><p id="error1"></p>
+    Nom <input type="text" name="lastname" class="inputSubscription" class="lastname" /><p id="error2"></p>
+    Pseudo <input type="text" name="login" class="inputSubscription" class="login" /><p id="error11"></p>
+    Adresse postal <input type="text" name="address" class="inputSubscription" class="address" /><p id="error4"></p>
+    Ville <input type="text" name="city" class="inputSubscription" class="city" /><p id="error5"></p>
+    Code postal <input type="text" name="zcode" class="inputSubscription" class="zcode" /><p id="error6"></p>
+    Adresse E-mail <input type="text" name="email" class="inputSubscription" class="email" /><p id="error10"></p>
+    Mot de passe <input type="password" name="password" class="inputSubscription" class="password" /><p id="error8"></p>
+    Verif. du mot de passe <input type="password" name="password_check" class="inputSubscription" class="password_check" /><p id="error9"></p>
+    Téléphone <input type="tel" name="tel" class="inputSubscription" class="tel" /><p id="error7"></p>
+    Newsletter<input type="checkbox" class="checkboxSubscription" class="checkboxNewsletter" name="newsletter" value="1"/>
     <p id="p-Subscription">Soyez informée des offres Du Conton à soie et recevez une invitation aux ventes privées du site.</p>
     <input type="submit" id="submitSubscription" value="Je m'inscris">
 </form>

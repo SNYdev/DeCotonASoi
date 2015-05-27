@@ -530,43 +530,43 @@ body{
 		margin-bottom: 8px;
 	}
 
-	#firstname{
+	.firstname{
 		margin-left: 103px;
 	}
 
-	#lastname{
+	.lastname{
 		margin-left: 125px;
 	}
 
-	#login{
+	.login{
 		margin-left: 106px;
 	}
 
-	#address{
+	.address{
 		margin-left: 55px;
 	}
 
-	#city{
+	.city{
 		margin-left: 131px;
 	}
 
-	#zcode{
+	.zcode{
 		margin-left: 76px;
 	}
 
-	#email{
+	.email{
 		margin-left: 56px;
 	}
 
-	#password{
+	.password{
 		margin-left: 64px;
 	}
 
-	#password_check{
+	.password_check{
 
 	}
 
-	#tel{
+	.tel{
 		margin-left: 85px;
 	}
 
