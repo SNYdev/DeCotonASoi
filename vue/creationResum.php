@@ -1,10 +1,12 @@
 <?php
 if(isset($_SESSION['creation'])) {
-    $str = str_replace("-", " ", $_SESSION['creation']['underwear']);
+    $udw = str_replace("-", " ", $_SESSION['creation']['underwear']);
+    $styl = str_replace("-", " ", $_SESSION['creation']['stylist']);
 
     echo "Modèle de soutien gorge : " . $_SESSION['creation']['bra'];
     echo "Tissue : " . $_SESSION['creation']['material'];
-    echo "Modèle de culotte : " . $str;
+    echo "Modèle de culotte : " . $udw;
+    echo "Votre styliste : " . $styl;
 }
 else {
     $user->addMessageFlash('info', 'Il n\'y a aucune création.');
@@ -13,3 +15,8 @@ else {
 
     exit;
 }
+?>
+
+<form action="">
+    <input type="submit" value="Commander">
+</form>

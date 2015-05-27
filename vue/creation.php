@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['bra'], $_POST['material'], $_POST['underwear'])) {
-    $_SESSION['creation'] = ['bra' => $_POST['bra'], 'material' => $_POST['material'], 'underwear' => $_POST['underwear']];
+    $_SESSION['creation'] = ['bra' => $_POST['bra'], 'material' => $_POST['material'], 'underwear' => $_POST['underwear'], 'stylist' => $_POST['stylist']];
 
     header('Location: ?page=creationResum');
 
@@ -61,5 +61,10 @@ if(isset($_POST['bra'], $_POST['material'], $_POST['underwear'])) {
             <input type="radio" name="underwear" class="modele-soutiensGorge" value="stanga">Stanga<br>
         </div>
     </div>
+
+    <select name="stylist">
+        <option value="Marine-Anton">Marine Anton</option>
+        <option value="Sophie-Dufrane">Sophie Dufrane</option>
+    </select>
     <input type="submit" class="submitDCAS" value="Créer">
 </form>

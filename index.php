@@ -12,11 +12,13 @@
     require_once 'model/Evaluation.php';
     require_once 'model/Connection.php';
     require_once 'model/Mail.php';
+    require_once 'model/Product.php';
 
     $user = new User(Connection::getConnection());
     $message = new Message(Connection::getConnection());
     $stylist = new Stylist(Connection::getConnection());
     $eval = new Evaluation(Connection::getConnection());
+    $product = new Product(Connection::getConnection());
 
 
     // Liste blanche, c'est notre routing qui correspont à nos pages
