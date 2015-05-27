@@ -65,6 +65,10 @@
         'profilUpdate' => [
             'controller' => 'profilUpdate',
             'secure' => true,
+            ],
+        'membership' => [
+            'controller' => 'membership',
+            'secure' => false,
         ],
     ];
 
@@ -95,7 +99,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
-    <title>De coton a soie</title>
+    <title>Du coton a soie</title>
     <link rel="stylesheet" type="text/css" href="vue/css/reset.css">
     <link rel="stylesheet" type="text/css" href="vue/css/style.css">
     <link rel="icon" type="image/png" href="vue/img/favicon.png"/>
@@ -124,7 +128,7 @@
         </div>
         <div class="banner">
             <div class="txtBanner">
-                <h1 class="bannerTitle">De Coton à Soie</h1>
+                <h1 class="bannerTitle">Du Coton à Soie</h1>
                 <h2 class="bannerContent">Une lingerie fait par vous et pour vous</h2>
             </div>
         </div>
@@ -197,7 +201,7 @@
                         <div class="contactInformation">
                             <h1 class="h1Information">Ma commande<br></h1>
                             <ul class="liInformation">
-                                <li><a class="linkFooter" href="?page=profilUpdate">Suivi de commande</a></li>
+                                <li><a class="linkFooter" href="?page=membership">Suivi de commande</a></li>
                                 <li><a class="linkFooter" href="">Frais d'envoie</a></li>
                                 <li><a class="linkFooter" href="">Délai de livraison</a></li>
                                 <li><a class="linkFooter" href="">Echange et remboursement</a></li>
