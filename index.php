@@ -194,7 +194,7 @@
                         <div class="contactInformation">
                             <h1 class="h1Information">Ma commande<br></h1>
                             <ul class="liInformation">
-                                <li><a class="linkFooter" href="">Suivi de commande</a></li>
+                                <li><a class="linkFooter" href="?page=profilUpdate">Suivi de commande</a></li>
                                 <li><a class="linkFooter" href="">Frais d'envoie</a></li>
                                 <li><a class="linkFooter" href="">Délai de livraison</a></li>
                                 <li><a class="linkFooter" href="">Echange et remboursement</a></li>
