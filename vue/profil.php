@@ -1,6 +1,6 @@
 <?php
-$profile = $user->getUserByLogin($_SESSION['user']['name']);
-
+$profile = $user->getUserByLogin($_SESSION['user']['login']);
+var_dump($profile);
 if($profile[0]['sexe'] === 1) {
 	echo "<p>Civilité : Madame</p>";
 }

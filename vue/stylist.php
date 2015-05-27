@@ -9,7 +9,7 @@ if (isset($stylistFirstname) && isset($stylistLastname)) {
     $getStylist = $stylist->getStylistByFirstnameAndLastname($stylistFirstname, $stylistLastname);
     $stylistId = $getStylist['id'];
 
-    echo "<img src=\"img/stylist" . $stylistId . "png alt =\"Stylist\">";
+    echo "<img src=\"img/stylist/" . $stylistId . "png alt =\"Stylist\">";
     echo $getStylist['prenom'];
     echo $getStylist['nom'];
     echo $getStylist['sexe'];

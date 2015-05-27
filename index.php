@@ -136,14 +136,17 @@
                         if (isset($_SESSION['user'])) {
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=logout">Logout</a></li>';
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=profil">Profil</a></li>';
-                    } else {
+                        } else {
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=inscription">Inscription</a></li>';
                         echo '<li class="navLiDcas"><a class="linkNav" href="?page=login">Connexion</a></li>';
-                    }
-                ?>
-            <li class="navLiDcas"><a class="linkNav" href="?page=home">Contact</a></li>
-        </ul>
-    </div>
+                        }
+                        if(isset($_SESSION['user']) && ($_SESSION['user']['login'] === 'admin')) {
+                            echo '<li class="navLiDcas"><a class="linkNav" href="?page=backoffice">Backoffice</a></li>';
+                        }
+                    ?>
+                <li class="navLiDcas"><a class="linkNav" href="?page=home">Contact</a></li>
+            </ul>
+        </div>
     <div class="actionBlock">
     <?php
 
@@ -194,7 +197,7 @@
                         <div class="contactInformation">
                             <h1 class="h1Information">Ma commande<br></h1>
                             <ul class="liInformation">
-                                <li><a class="linkFooter" href="">Suivi de commande</a></li>
+                                <li><a class="linkFooter" href="?page=profilUpdate">Suivi de commande</a></li>
                                 <li><a class="linkFooter" href="">Frais d'envoie</a></li>
                                 <li><a class="linkFooter" href="">Délai de livraison</a></li>
                                 <li><a class="linkFooter" href="">Echange et remboursement</a></li>

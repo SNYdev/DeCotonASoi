@@ -394,7 +394,20 @@ body{
 .contentStylist{
 }
 
+
+
+
+
+
+
+
 /*Page login*/
+
+
+
+
+
+
 
 .contentLogin{
 	width: 950px;
@@ -493,4 +506,167 @@ body{
 		width: 200px;
 		height: 35px;
 		margin-bottom: 50px;
+	}
+
+
+
+
+/*Page inscription*/
+
+
+
+.formInscription{
+	width: 416px;
+	margin:auto;
+	font-family: 'OpenSans-Light';
+	padding-bottom: 30px;
+}
+
+	.inputSubscription{
+		width: 250px;
+		height: 30px;
+		border: 0px;
+		background-color: white;
+		margin-bottom: 8px;
+	}
+
+	#firstname{
+		margin-left: 103px;
+	}
+
+	#lastname{
+		margin-left: 125px;
+	}
+
+	#login{
+		margin-left: 106px;
+	}
+
+	#address{
+		margin-left: 55px;
+	}
+
+	#city{
+		margin-left: 131px;
+	}
+
+	#zcode{
+		margin-left: 76px;
+	}
+
+	#email{
+		margin-left: 56px;
+	}
+
+	#password{
+		margin-left: 64px;
+	}
+
+	#password_check{
+
+	}
+
+	#tel{
+		margin-left: 85px;
+	}
+
+	.checkSubscription{
+		margin-bottom: 20px;	
+	}
+
+	#submitSubscription{
+		width: 100px;
+		height: 30px;
+		font-family: 'OpenSans-Light';
+		background-color: #edaf86;
+		border: 0px;
+		color: white;
+		cursor: pointer;
+	}
+
+	#p-Subscription{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+.titleSubscription{
+	font-family: 'Kenzo';
+	color: #edaf86;
+	font-size: 40px;
+}
+
+	#subscription-H1{
+		margin-left: 377px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+
+
+
+
+
+/*Page profile*/
+
+
+
+
+
+.profilCenter{
+	width: 950px;
+	margin: auto;
+	line-height: 30px;
+}
+
+/*	.titleStylist1{
+		padding-top: 20px;
+		font-family: 'Kenzo';
+		color: #edaf86;
+		font-size: 50px;
+	}
+
+	.subTitleStylist1{
+		font-family: 'Kenzo';
+		color: #95b9c7;
+		font-size: 30px;
+	}*/
+
+	#login{
+		margin-left: 70px;
+	}
+	#size{
+		margin-left: 45px;
+	}
+	#address{
+		margin-left: 70px;
+	}
+	#city{
+		margin-left: 99px;
+	}
+	#zcode{
+		margin-left: 42px;
+	}
+	#email{
+		margin-left: 90px;
+	}
+	#tel{
+		margin-left: 61px;
+	}
+	#password{
+		margin-left: 32px;
+	}
+	#password_check{
+		width: 190px;
+		margin-left: 12px;
+	}
+
+	#submitProfil{
+		margin-top: 20px;
+		width: 100px;
+		height: 30px;
+		font-family: 'OpenSans-Light';
+		background-color: #edaf86;
+		border: 0px;
+		color: white;
+		cursor: pointer;
 	}
