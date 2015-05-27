@@ -74,6 +74,10 @@
             'controller' => 'creation',
             'secure' => true,
         ],
+        'creationResum' => [
+            'controller' => 'creationResum',
+            'secure' => true,
+        ],
     ];
 
     // verifions la pertinance de la page en GET

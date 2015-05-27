@@ -37,5 +37,7 @@
 </form>
 
 <?php
-$_SESSION['creation'] = ['bra' => $_POST['bra'], 'material' => $_POST['material'], 'underwear' => $_POST['underwear']];
+    $_SESSION['creation'] = ['bra' => $_POST['bra'], 'material' => $_POST['material'], 'underwear' => $_POST['underwear']];
+    header('location : ?page=creationResum');
+    exit
 ?>
