@@ -401,13 +401,21 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Page login*/
-
-
-
-
-
-
 
 .contentLogin{
 	width: 950px;
@@ -511,9 +519,23 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Page inscription*/
-
-
 
 .formInscription{
 	width: 416px;
@@ -606,11 +628,15 @@ body{
 
 
 
+
+
+
+
+
+
+
+
 /*Page profile*/
-
-
-
-
 
 .profilCenter{
 	width: 950px;
@@ -672,6 +698,17 @@ body{
 	}
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*Page abonnement*/
 
 .abo{
@@ -711,7 +748,18 @@ body{
 				padding-bottom: 20px;
 			}
 
-			/*Page Creation*/
+
+
+
+
+
+
+
+
+
+
+
+/*Page Creation*/
 
 
 .BLOCK{
@@ -775,4 +823,88 @@ body{
 		#modelRight{
 			width: 50%;
 			float: left;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Page stylist*/
+
+.blockStylist{
+
+    width: 1055px;
+    height: 270px;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 30px;
+
+}
+
+	.blockStylistContent{
+		float: left;
+		width: 65%;
+	}
+
+		.blockSname{
+		    font-family: 'Kenzo';
+		    font-size: 40px;
+		    padding-bottom: 15px;
+		    color: #edaf86;
+
+		}
+
+		.blockStype{			
+		    font-family: 'Kenzo';
+		    padding-top: 5px;
+		    padding-bottom: 10px;
+		    color: #95b9c7;
+		    letter-spacing: 5px;
+
+		}
+
+		.blockSresum{
+   			margin-top: 10px;
+   			font-family: 'OpenSans-Light';
+   			line-height: 30px;
+
+		}
+
+		.blockSsubmit{
+		    margin-top: 20px;
+		    margin-bottom: 10px;
+		    padding: 10px;
+		    background-color: orange;
+		    border: 0px;
+		    font-family: 'Kenzo';
+		    letter-spacing: 3px;
+		    color: white;
+		    cursor: pointer;
+		}
+
+	.blockSpictures{
+		width: 244px;
+		margin-left: 125px;
+		float: left;
+
+	}
+		.pictures{
+			padding-right: 10px;
+    		padding-left: 10px;
+		}
+
+		#img3{
+		    padding-left: 134px;
+		    padding-top: 10px;
 		}
