@@ -1,3 +1,12 @@
+<?php
+if(isset($_POST['bra'], $_POST['material'], $_POST['underwear'])) {
+    $_SESSION['creation'] = ['bra' => $_POST['bra'], 'material' => $_POST['material'], 'underwear' => $_POST['underwear']];
+
+    header('Location: ?page=creationResum');
+
+    exit;
+}
+?>
 <form action="" class="formCreation" method="post">
     <div class="BLOCK">
         <h2 class="titleFormCreation">Modèle de soutiens gorge</h2>
@@ -54,13 +63,3 @@
     </div>
     <input type="submit" class="submitDCAS" value="Créer">
 </form>
-
-<?php
-if(isset($_POST['bra'], $_POST['material'], $_POST['underwear'])) {
-    $_SESSION['creation'] = ['bra' => $_POST['bra'], 'material' => $_POST['material'], 'underwear' => $_POST['underwear']];
-
-    header('Location: ?page=creationResum');
-
-    exit;
-}
-?>
