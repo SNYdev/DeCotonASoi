@@ -670,3 +670,43 @@ body{
 		color: white;
 		cursor: pointer;
 	}
+
+
+/*Page abonnement*/
+
+.abo{
+	width: 950px;
+	height: 200px;
+	/*background-color: red;*/
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 45px;
+	text-align: center;
+}
+
+	.aboCenter{
+		width: 700px;
+		margin: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		/*background-color: yellow;*/
+	}
+		.titleMembership{
+			font-family: 'Kenzo';
+			color: #edaf86;
+			font-size: 40px;
+			padding-bottom: 50px;
+		}
+
+		.aboType{
+			width: 33.3%;
+			height: 25px;
+			/*background-color: pink;*/
+			float: left;
+		}
+
+			.subTitleAbo{
+				font-family: 'OpenSans-Light';
+				font-size: 30px;
+				padding-bottom: 20px;
+			}
