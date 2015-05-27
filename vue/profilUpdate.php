@@ -1,29 +1,37 @@
-<form action="" method="post">
-    <p>Civilité : <?php
-        if($_SESSION['user']['gender'] === 1) {
-            echo "Madame";
-        }
-        else {
-            echo "Monsieur";
-        }
-        ?>
-    </p>
-    <p>Prénom : <?php echo $_SESSION['user']['firstname']; ?></p>
-    <p>Nom : <?php echo $_SESSION['user']['lastname']; ?></p></p>
-    <p>*Pseudo : <input type="text" name="login" id="login" /></p><p id="error11"></p>
-    <p>Mensuration : <input type="text" name="size" id="size" /></p><p id="error3"></p>
-    <p>*Adresse : <input type="text" name="address" id="address" /></p><p id="error4"></p>
-    <p>*Ville : <input type="text" name="city" id="city" /></p><p id="error5"></p>
-    <p>*Code postal : <input type="text" name="zcode" id="zcode" /></p><p id="error6"></p>
-    <p>*Email : <input type="text" name="email" id="email" /></p><p id="error10"></p>
-    <p>Téléphone : <input type="tel" name="tel" id="tel" /></p><p id="error7"></p>
-    <p>*Mot de passe : <input type="password" name="password" id="password" /></p><p id="error8"></p>
-    <p>*Vérificaion mot de passe : <input type="password" name="password_check" id="password_check" /></p><p id="error9"></p>
-    <p>Newsletter : <input type="checkbox" name="newsletter" />Je souhaite recevoir les newsletter Du coton à soie</p>
-    <p><input type="submit" /></p>
-</form>
-
-<?php
+    <form action="" method="post" class="formInscription">
+        <p>Civilité :<?php
+            if($_SESSION['user']['gender'] === 1) {
+                echo "Madame";
+            }
+            else {
+                echo "Monsieur";
+            }
+            ?>
+        </p>
+        Prénom : <?php echo $_SESSION['user']['firstname']; ?></p>
+        Nom : <?php echo $_SESSION['user']['lastname']; ?></p></p>
+        *Pseudo : <input type="text" name="login" class="inputSubscription" id="login" />
+        <p id="error11"></p>
+        Mensuration :<input type="text" name="size" class="inputSubscription" id="size" />
+        <p id="error3"></p>
+        *Adresse :<input type="text" name="address" class="inputSubscription" id="address" />
+        <p id="error4"></p>
+        *Ville :<input type="text" name="city" class="inputSubscription" id="city" />
+        <p id="error5"></p>
+        *Code postal :<input type="text" name="zcode" class="inputSubscription" id="zcode" />
+        <p id="error6"></p>
+        *Email :<input type="text" name="email" class="inputSubscription" id="email" />
+        <p id="error10"></p>
+        Téléphone :<input type="tel" name="tel" class="inputSubscription" id="tel" />
+        <p id="error7"></p>
+        *Mot de passe :<input type="password" name="password" class="inputSubscription" id="password" />
+        <p id="error8"></p>
+        *Vérificaion mot de passe :<input type="password" name="password_check" class="inputSubscription" id="password_check" />
+        <p id="error9"></p>
+        Newsletter : Je souhaite recevoir les newsletter Du coton à soie<input type="checkbox" name="newsletter" id="checkboxNewsletter"/><br>  
+        <input type="submit" class="" id="submitProfil"/></p>
+    </form>
+// <?php
 if(!empty($_POST['login']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zcode']) && !empty($_POST['password']) && !empty($_POST['password_check']) && !empty($_POST['email']) && (strlen($_POST['login']) >= 2) && (strlen($_POST['city']) >= 3) && (strlen($_POST['zcode']) == 5) && is_numeric($_POST['zcode']) && (strlen($_POST['password']) >= 6) && ($_POST['password_check'] === $_POST['password'])) {
     $count = $user->countUserByName($_POST['login']);
 
