@@ -70,6 +70,10 @@
             'controller' => 'membership',
             'secure' => false,
         ],
+        'creation' => [
+            'controller' => 'creation',
+            'secure' => true,
+        ],
     ];
 
     // verifions la pertinance de la page en GET
@@ -87,7 +91,7 @@
     //check pour la sécurité  : si la page à la clée 'secure' est true et que $_SESSION['name'] n'est pas définis
     if ($routing[$page]['secure'] === true && !isset($_SESSION['user'])) {
         //Met en session un message informatif
-        User::addMessageFlash('info', 'Veuillez-vous connecter afin d\'accéder à cette page');
+        $user->addMessageFlash('info', 'Veuillez-vous connecter afin d\'accéder à cette page');
 
         //redirection
         header("location: index.php?page=login");
@@ -138,11 +142,13 @@
                 <li class="navLiDcas"><a class="linkNav" href="?page=stylistes1">Nos stylistes</a></li>
                     <?php
                         if (isset($_SESSION['user'])) {
-                        echo '<li class="navLiDcas"><a class="linkNav" href="?page=logout">Logout</a></li>';
-                        echo '<li class="navLiDcas"><a class="linkNav" href="?page=profil">Profil</a></li>';
+                            echo '<li class="navLiDcas"><a class="linkNav" href="?page=logout">Logout</a></li>';
+                            echo '<li class="navLiDcas"><a class="linkNav" href="?page=profil">Profil</a></li>';
+                            echo '<li class="navLiDcas"><a class="linkNav" href="?page=membership">S\'abonner</a></li>';
+                            echo '<li class="navLiDcas"><a class="linkNav" href="?page=creation">Créer sa lingerie</a></li>';
                         } else {
-                        echo '<li class="navLiDcas"><a class="linkNav" href="?page=inscription">Inscription</a></li>';
-                        echo '<li class="navLiDcas"><a class="linkNav" href="?page=login">Connexion</a></li>';
+                            echo '<li class="navLiDcas"><a class="linkNav" href="?page=inscription">Inscription</a></li>';
+                            echo '<li class="navLiDcas"><a class="linkNav" href="?page=login">Connexion</a></li>';
                         }
                         if(isset($_SESSION['user']) && ($_SESSION['user']['login'] === 'admin')) {
                             echo '<li class="navLiDcas"><a class="linkNav" href="?page=backoffice">Backoffice</a></li>';
@@ -201,7 +207,7 @@
                         <div class="contactInformation">
                             <h1 class="h1Information">Ma commande<br></h1>
                             <ul class="liInformation">
-                                <li><a class="linkFooter" href="?page=membership">Suivi de commande</a></li>
+                                <li><a class="linkFooter" href="">Suivi de commande</a></li>
                                 <li><a class="linkFooter" href="">Frais d'envoie</a></li>
                                 <li><a class="linkFooter" href="">Délai de livraison</a></li>
                                 <li><a class="linkFooter" href="">Echange et remboursement</a></li>
