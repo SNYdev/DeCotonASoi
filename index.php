@@ -74,11 +74,15 @@
         ],
         'creation' => [
             'controller' => 'creation',
-            'secure' => false,
+            'secure' => true,
         ],
         'creationResum' => [
             'controller' => 'creationResum',
-            'secure' => false,
+            'secure' => true,
+        ],
+        'addOrder' => [
+            'controller' => 'addOrder',
+            'secure' => true,
         ],
     ];
 

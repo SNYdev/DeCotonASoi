@@ -8,8 +8,8 @@ $getStylist = $stylist->getStylistByFirstnameAndLastname($stylistFirstname, $sty
 
 $product->addProduct('', $_SESSION['creation']['bra'], '', $_SESSION['creation']['material'], $getStylist[0]['id']);
 
-/*$user->addMessageFlash('success','Votre commande a été enregistré !');
+$user->addMessageFlash('success','Votre commande a été enregistré !');
 
-header('Location: ?page=home');
+header('Location: ?page=stylistes1');
 
-exit;*/
+exit;
