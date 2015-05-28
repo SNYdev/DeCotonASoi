@@ -1,5 +1,6 @@
 <?php
 $profile = $user->getUserByLogin($_SESSION['user']['login']);
+
 if($profile[0]['sexe'] === 1) {
 	echo "<p>Civilité : Madame</p>";
 }
@@ -19,7 +20,8 @@ if(isset($profile[0]['telephone'])) {
 else {
 	echo "<p>Téléphone : Non renseigné</p>";
 }
-if($profile[0]['Newsletter'] === 1) {
+
+if($profile[0]['Newsletter'] === '1') {
 	echo "<p>Vous êtes abonné à la newsletter</p>";
 }
 else {
