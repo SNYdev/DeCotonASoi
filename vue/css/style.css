@@ -135,7 +135,7 @@ body{
 				}
 
 				.subTitleStylist{
-					font-family: 'Kenzo';
+					font-family: 'OpenSans-Light';
 					color: #95b9c7;
 					padding-bottom: 30px;
 				}
@@ -386,9 +386,9 @@ body{
 	}
 
 	.subTitleStylist1{
-		font-family: 'Kenzo';
+		font-family: 'OpenSans-Light';
 		color: #95b9c7;
-		font-size: 30px;
+		font-size: 18px;
 	}
 
 .contentStylist{
@@ -866,7 +866,7 @@ body{
 		}
 
 		.blockStype{			
-		    font-family: 'Kenzo';
+		    font-family: 'OpenSans-Light';
 		    padding-top: 5px;
 		    padding-bottom: 10px;
 		    color: #95b9c7;
